@@ -1,31 +1,124 @@
 ---
 ---
+
 /* Core */
 @import "bootstrap";
+
+
 /* FONTS */
 @import "font-awesome";
-
-
 /*
- *From here you can put your custom CSS
+ * Author: Ariel Sperduti
+ * URL: http://ariel.sperduti.com.ar
+ *
  */
+
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+
+/* OVERALL ASPECT */
+
 body {
-  padding-top: 70px;
+  background-color: #2b93cc;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 70px;
 }
 
-#sidebar {
-  padding-top: 70px;
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.h1index {
+    font-family: "Raleway";
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 50px;
+    line-height: 50px;
+    color: #fff; 
+}
+
+.h2index {
+    font-family: "Raleway";
+    font-size: 30px;
+    line-height: 30px;
+    line-height: 42px;
+    font-weight: 100;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.mobile-image .mobile {
+    float: right;
+    text-align: right;
+    position: relative;
+}
+.mobile-image {
+    z-index: 99999999;
+}
+.video-wrapper {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: 1;
+    left: 5.5%;
+    top: 11%;
+}
+
+video {
+    width: 100%!important;
+    height: auto!important;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* Paragraph & Typographic */
+p {
+    text-align: justify;
 }
 
 .centered {
     text-align: center;
 }
 
-/*
-*
-* Custom
-*
-*/
-#main {
-  background-color: #305e63;
+.justified {
+    text-align: justify;
+}
+
+
+/* Links */
+a {
+    color: #FFFFFF;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #FFFAFF;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
 }
