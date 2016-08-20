@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+{% include schema-article.html %}
+
+<div class=col-md-9>
+  <article>
+    <div class="page-header">
+    <h1 rel='bookmark'><a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a></h1>
+	<!--Info below title -->			    
+	<ul class='list-inline'>
+	  <!--Date -->
+	  
+	  <li><i class="fa fa-calendar"></i><small><span class='text-muted'>
+	    {% if page.sitemap.lastmod %}
+	      <time>{{ page.sitemap.lastmod | date: "%d-%m-%Y" }}</time>
+	    {% elsif page.date %}
+	      <time>{{ page.date | date: "%d-%m-%Y" }}</time>
+	    {% else %}
+	      <time>{{ site.time | date: "%d-%m-%Y" }}</time>
+	    {% endif %}
+	  
+	  </span></small></li><!--/Date -->
+	
+	</ul>
+    </div>	<!--/Title -->
+
+    <div class="row">
+      {{ content }}
+    </div>
+
+    <!--TAGS -->
+    <div class="row">
+      <ul class='list-inline'>
+	<!--Date -->
+	{% for tag in page.tags %}
+	  <li>
+	  <i class="fa fa-tag"></i>
+	  <small><span class='text-muted'>
+	  {{ tag }}
+	  </span></small></li><!--/Date -->
+	{% endfor %}
+      </ul>
+    </div><!--/TAGS-->
+    
+    <div class="row">
+      {% include disqus.html %}
+    </div>
+  </article>
+</div>
+
+
+  {% include sidebar.html %}

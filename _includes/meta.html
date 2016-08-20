@@ -1,0 +1,81 @@
+{% assign base_url = site.baseurl | prepend: site.url %}
+
+{% assign url = page.permalink | prepend: base_url %}
+
+
+
+{% capture img %}
+  {% if page.image %}
+    {{ page.image | prepend: base_url }}
+  {% else %}
+    {{ site.image | prepend: base_url }}
+  {% endif %}
+{% endcapture %}
+{% assign img = img | strip_newlines | strip %}
+
+{% assign page_excerpt = page.excerpt | strip_html | escape | strip | strip_newlines | truncate: 160 %}
+
+
+{% capture page_description %}
+  {% if page.description %}
+    {{ page.description }}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endcapture %}
+{% assign page_description = page_description | strip_html | escape | strip | strip_newlines | truncate: 160 %}
+
+{% if page.tags.size != 0 and page.tags.size != null %}
+  {% for item in page.tags %}
+    {% assign keywords = keywords | append: item  %}
+    {% unless forloop.last %}{% assign keywords =  keywords | append:','  %}{% endunless %}
+  {% endfor %}
+{% else %}
+  {% assign keywords = site.keywords  %}
+{% endif %}
+  
+
+    <!-- Generic metas -->
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <meta name="description" content="{{ page_description }}" />
+    <link rel="canonical" href="{{ url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ base_url }}/feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ base_url }}/sitemap.xml" />
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page_description }}" />
+    <meta property="og:image" content="{{ img }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ url }}" />
+    <meta property="og:type" content="article" />
+    {% if site.facebook_app %}
+    <meta property="fb:app_id" content="{{ site.facebook_app }}" />
+    {% endif %}
+    {% if site.facebook_adminid %}
+    <meta property="fb:admins" content="{{ site.facebook_adminid }}">
+    {% endif %}
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page_description }}" />
+    <meta name="twitter:card" content="summary" />
+    {% if site.socialmedia.twitter %}
+    <meta name="twitter:site" content="@{{ site.socialmedia.twitter }}" />
+    {% endif %}
+    <meta name="twitter:image" content="{{ img }}" />
+
+    <meta name="keywords" content="{{ keywords }}" />
+    {% if site.searchconsole_verification %}
+    <meta name="google-site-verification" content="{{ site.searchconsole_verification }}" />
+    {% endif %}
+    {% if site.bing_verification %}
+    <meta name="msvalidate.01" content="{{ site.bing_verification }}" />
+    {% endif %}
+    
+    
+    
+    

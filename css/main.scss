@@ -1,0 +1,31 @@
+---
+---
+/* Core */
+@import "bootstrap";
+/* FONTS */
+@import "font-awesome";
+
+
+/*
+ *From here you can put your custom CSS
+ */
+body {
+  padding-top: 70px;
+}
+
+#sidebar {
+  padding-top: 70px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/*
+*
+* Custom
+*
+*/
+#main {
+  background-color: #305e63;
+}

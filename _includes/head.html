@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>{% if page.title %}{{ page.title }} - {{ site.name }}{% else %} {{ site.name }}{% endif %}</title>
+    {% include meta.html %}
+    {% include styles.html %}
+    {% include fbapp.html %}
+    {% include schema.html %} 
+  </head>
+
