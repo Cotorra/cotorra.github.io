@@ -1,0 +1,27 @@
+   <script type="application/ld+json">
+      {
+      "@context" : "http://schema.org",
+      "@type" : "WebSite",
+      "name" : "{{ site.name }}",
+      "url" : "{{ site.url }}",
+      "headline": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "sameAs" : [
+      	{% if site.socialmedia.twitter %}
+        "https://twitter.com/{{ site.socialmedia.twitter }}",
+	{% endif %}
+	{% if site.socialmedia.facebook %}
+	"https://www.facebook.com/{{ site.socialmedia.facebook }}",
+	{% endif %}
+	{% if site.socialmedia.youtube %}
+	"https://www.youtube.com/{{ site.socialmedia.youtube }}",
+	{% endif %} 
+	{% if site.socialmedia.googleplus %}
+	"https://plus.google.com/+{{ site.socialmedia.googleplus }}",
+	{% endif %} 
+	{% if site.socialmedia.instagram %}
+	"https://www.instagram.com/{{ site.socialmedia.instagram }}"
+	{% endif %} 
+      ]
+      }
+   </script> 

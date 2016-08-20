@@ -1,0 +1,83 @@
+{% assign base_url = site.baseurl | prepend: site.url %}
+
+{% assign url = page.permalink | prepend: base_url %}
+
+
+
+{% capture img %}
+  {% if page.image %}
+    {{ page.image | prepend: base_url }}
+  {% else %}
+    {{ site.image | prepend: base_url }}
+  {% endif %}
+{% endcapture %}
+{% assign img = img | strip_newlines | strip %}
+
+{% capture page_description %}
+  {% if page.description %}
+    {{ page.description }}
+  {% else if page.excerpt %}
+    {{ page.excerpt}}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endcapture %}
+{% assign page_description = page_description | strip_html | escape | strip | strip_newlines | truncate: 160 %}
+
+{% capture page_datePublished %}
+  {% if page.date %}
+    {{ page.date }}
+  {% else %}
+    {{ site.time }}
+  {% endif %}
+{% endcapture %}
+{% assign page_datePublished = page_datePublished | date: "%Y-%m-%d"  %}
+
+
+{% capture page_dateModified %}
+  {% if page.sitemap.lastmod %}
+    {{ page.sitemap.lastmod }}
+  {% elsif page.date %}
+    {{ page.date }}
+  {% else %}
+    {{ site.time }}
+  {% endif %}
+{% endcapture %}
+{% assign page_dateModified = page_dateModified | date: "%Y-%m-%d"  %}
+
+
+   <script type="application/ld+json">
+      {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage":{
+	"@type":"WebPage",
+	"@id":"{{ url }}"
+      },
+      "headline": "{{ page.title }}",
+      "image": {
+	"@type": "ImageObject",
+	"url": "{{ img }}",
+	"height": 1024,
+	"width": 768
+      },
+      "datePublished": "{{ page_datePublished }}",
+      "dateModified": "{{ page_dateModified }}",
+      
+      "author": {
+	"@type": "Person",
+	"name": "{{ site.name }}"
+      },
+      "publisher": {
+	"@type": "Organization",
+	"name": "{{ site.name }}",
+	"logo": {
+	  "@type": "ImageObject",
+	  "url": "{{ site.url }}{{ site.avatar }}",
+	  "width": 600,
+	  "height": 60
+	}
+      },
+      "description": "{{ page_description }}"
+    }
+   </script> 
