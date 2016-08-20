@@ -9,8 +9,8 @@
 title: Cotorra
 name: Cotorra ChatBot
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://cotorra.github.io" # the base hostname & protocol for your site
-description: > # Cotorra es un chatbot, robot chat, un bot para Facebook Meseenger, funciona como un asistente automatizado para su negocio.
+url: "https://cotorra.github.io" # the base hostname & protocol for your site
+description: > Cotorra es un chatbot, robot chat, un bot para Facebook Meseenger, funciona como un asistente automatizado para su negocio.
 keywords: chatbot, robot chat, bot, messenger, bot messenger, bot facebook, robot facebook
 favicon: img/favicon.png
 image: img/jekyll-start.png
