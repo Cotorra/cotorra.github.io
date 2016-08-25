@@ -15,7 +15,7 @@ permalink: index.html
       <h2 class="h2index">¡Conéctate con más clientes y aumenta las ventas!</h2>
     </div>
     <div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 mobile-image">
-      <div class="mobile">
+      <div class="mobile img-responsive">
 	<div class="video-wrapper">
 	  <video id="demovid" muted="" autoplay="" loop="" controls="" poster="/img/aheadvid-thumb1.png">
 	    <source src="/img/cotorra-demo-video.mp4" type="video/mp4">
