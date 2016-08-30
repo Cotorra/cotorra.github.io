@@ -14,13 +14,13 @@
  */
 
 /* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('http://fonts.googleapis.com/css?family=Raleway:400,300,700,900');
 
 /* OVERALL ASPECT */
 
 body {
-  background-color: #2b93cc;
+    background-color: #2b93cc;
     font-family: "Lato";
     font-weight: 300;
     font-size: 16px;
@@ -121,4 +121,55 @@ a:after {
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+/* Light Grey */
+.lg {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+    color: #2b93cc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lg p{
+	color: #666;
+	text-align: justify;
+}
+
+.title-head {
+    text-transform: none;
+    color: #333;
+    font-size: 22px;
+    margin-top: 0;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.icon-head {
+    text-transform: none;
+    font-size: 50px;
+    margin-top: 0;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 22px;
+    color: #2b93cc;
+}
+
+.generich2 {
+    text-transform: none;
+    color: #333;
+    font-size: 40px;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.generich4 {
+    text-transform: none;
+    color: #333;
+    font-size: 25px;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 50px;
 }
