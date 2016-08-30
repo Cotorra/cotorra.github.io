@@ -61,6 +61,8 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
     text-align: right;
     position: relative;
+    max-width: 70%;
+    max-height: 70%;
 }
 .mobile-image {
     z-index: 99999999;
@@ -123,9 +125,25 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
+.blue {
+    background-color: #2b93cc;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 70px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+
 /* Light Grey */
 .lg {
     padding: 100px 0;
+    padding-right: 100px;
+    padding-left: 100px;
     background-color: #FFFFFF;
     color: #2b93cc;
     text-align: center;
@@ -141,7 +159,6 @@ a:after {
     text-transform: none;
     color: #333;
     font-size: 22px;
-    margin-top: 0;
     line-height: 22px;
     font-weight: 500;
     margin-bottom: 22px;
@@ -150,11 +167,11 @@ a:after {
 .icon-head {
     text-transform: none;
     font-size: 50px;
-    margin-top: 0;
     line-height: 22px;
     font-weight: 500;
     margin-bottom: 22px;
     color: #2b93cc;
+    padding: 20px;   
 }
 
 .generich2 {
@@ -172,4 +189,12 @@ a:after {
     line-height: 22px;
     font-weight: 500;
     margin-bottom: 50px;
+}
+
+.caracteristicas:hover {
+    background: #D3E1FD;
+}
+
+.conocemas{
+    box-sizing: border-box;
 }
