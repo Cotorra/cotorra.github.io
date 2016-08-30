@@ -2,9 +2,9 @@
 layout: default
 permalink: index.html
 ---
-<div  class="container-fluid">
+
   <div class="row blue">
-    <div class="col-md-7 col-md-push-1 col-sm-push-1 col-sm-7">
+    <div class="col-md-7 col-md-offset-1 col-sm-offset-1 col-sm-7">
       <h1 class="h1index">Cotorra ChatBot</h1>
       <h2 class="h2index">Tu sitio web, negocio o fanpage atendido las 24hs los 7 dias de la semana</h2>
       <p><strong>Cotorra</strong> es un <strong>servicio de atencion online</strong> automatizado(un Chatbot, Robot Chat, Bot) capaz de funcionar las 24hs del dia. 
@@ -17,7 +17,7 @@ permalink: index.html
       <a type="button" class="btn btn-default btn-lg" href="#conocemas">Conoce mas! <i class="fa fa-chevron-down"></i> </a>
       
     </div>
-    <div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 mobile-image">
+    <div class="col-md-4 col-sm-4 mobile-image">
       <div class="mobile img-responsive">
 	<div class="video-wrapper">
 	  <video id="demovid" muted="" autoplay="" loop="" controls="" poster="/img/cotorra-video-thumb.png">
@@ -101,7 +101,7 @@ permalink: index.html
       </form>
     </div>
   </div>
-</div>
+
 
 
 
