@@ -71,7 +71,7 @@ permalink: index.html
   </div>
   <div class="row blue">
     <div class="col-md-6 col-sm-6">
-      <iframe height="400" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-32.936447,-60.7208597&amp;spn=0.025669,0.055747&amp;z=17&amp;output=embed"></iframe>
+      <iframe height="400" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-32.936447,-60.7208597&amp;spn=0.025669,0.055747&amp;z=10&amp;output=embed"></iframe>
     </div>
     <div class="col-md-6 col-sm-6">
     <h4>Contacto</h4>
@@ -97,7 +97,7 @@ permalink: index.html
 	  <textarea name="body" id="message" class="form-control" width="100%" required></textarea>
 	</div>
 	<input type="hidden" name="_next" value="//cotorrachatbot.com/">
-	<button type="submit" class="btn btn-default">Enviar</button>
+	<button type="submit" class="btn btn-default btn-block">Enviar</button>
       </form>
     </div>
   </div>
