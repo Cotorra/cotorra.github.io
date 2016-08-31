@@ -14,7 +14,7 @@ url: "http://cotorrachatbot.com" # the base hostname & protocol for your site
 description: Cotorra es un chatbot, robot chat, un bot para Facebook Meseenger, funciona como un asistente automatizado para su negocio.
 keywords: chatbot, robot chat, bot, messenger, bot messenger, bot facebook, robot facebook
 favicon: img/favicon.png
-image: img/jekyll-start.png
+image: img/cotorrachatbot-banner.png
 permalink: /:title
 
 
@@ -41,7 +41,7 @@ facebook_adminid:
 
 socialmedia:
   facebook: cotorrachatbot
-  twitter:
+  twitter: cotorrachatbot
   googleplus:
   instagram:
   youtube:
