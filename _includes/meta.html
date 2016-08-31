@@ -6,9 +6,9 @@
 
 {% capture img %}
   {% if page.image %}
-    {{ page.image | prepend: base_url }}
+    {{ page.image | prepend: '/' | prepend: base_url }}
   {% else %}
-    {{ site.image | prepend: base_url }}
+    {{ site.image | prepend: '/' | prepend: base_url }}
   {% endif %}
 {% endcapture %}
 {% assign img = img | strip_newlines | strip %}
