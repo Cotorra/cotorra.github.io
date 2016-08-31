@@ -12,7 +12,7 @@ permalink: index.html
       <p>Cotorra es un <strong>robot chat</strong>, o <strong>chatbot</strong>, es decir un sistema automatizado que simula la conversacion con una persona.
       Al ser un bot de chat automatizado permite atender todas las consultas de tus visitantes las 24hs, los 7 dias de la semana!
       Cotorra es un sistema flexible que puede ser adaptado a las necesidades del cliente o negocio.</p>
-      <h2 class="h2index">¡Conéctate con más clientes y aumenta las ventas!</h2>
+      <h2 class="h2index">¡Conectáte con más clientes y aumentá las ventas!</h2>
       
       <a type="button" class="btn btn-default btn-lg" href="#conocemas">Conoce mas! <i class="fa fa-chevron-down"></i> </a>
       
@@ -37,7 +37,7 @@ permalink: index.html
     
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-facebook tilt icon-head"></i>
-	    <h4 class="title-head">Paginas de Facebook</h4>
+	    <h4 class="title-head">Páginas de Facebook</h4>
 	    <p>Nuestro bot se integra directamente con tu pagina de facebook</p>
     </div><!-- col-lg-4 -->
 
@@ -49,23 +49,23 @@ permalink: index.html
 
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-calendar icon-head"></i>
-	    <h4 class="title-head">Configurar horarios de atencion</h4>
+	    <h4 class="title-head">Configurar horarios de atención</h4>
 	    <p>Si prefieres atender directamente las consultas tu mismo en horario laboral, puedes programar el horario, y el robot se encargara del resto.</p>
     </div><!-- col-lg-4 -->
     
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-mobile icon-head"></i>
-	    <h4 class="title-head">Notificacion Push</h4>
-	    <p>Recibe notificaciones push en tu mobil o escritorio, cuando los clientes dejen todos sus datos de contacto.</p>
+	    <h4 class="title-head">Notificaciones Push</h4>
+	    <p>Recibe notificaciones push en tu móvil, smarthphone o escritorio, cuando los clientes dejen todos sus datos de contacto.</p>
     </div><!-- col-lg-4 -->    
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-shopping-bag icon-head"></i>
 	    <h4 class="title-head">Vitrina de productos</h4>
-	    <p>Muestra todo tu catalogo de productos desde el chat y lleva directamente a los clientes a tu tienda o vende directamente desde el chat!</p>
+	    <p>Muestra todo tu catálogo de productos desde el chat y lleva directamente a los clientes a tu tienda o vende directamente desde el chat!</p>
     </div><!-- col-lg-4 -->    
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-comments icon-head"></i>
-	    <h4 class="title-head">Integracion NLP </h4>
+	    <h4 class="title-head">Integración NLP </h4>
 	    <p>Nuestros bots entienden el las peticiones de los clientes y responden inteligentemente con lo que ellos quieren.</p>
     </div><!-- col-lg-4 -->
   </div>
