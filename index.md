@@ -6,16 +6,16 @@ permalink: index.html
   <div class="row blue">
     <div class="col-md-7 col-md-offset-1 col-sm-offset-1 col-sm-7">
       <h1 class="h1index">Cotorra ChatBot</h1>
-      <h2 class="h2index">Tu sitio web, negocio o fanpage atendido las 24hs los 7 dias de la semana</h2>
-      <p><strong>Cotorra</strong> es un <strong>servicio de atencion online</strong> automatizado(un Chatbot, Robot Chat, Bot) capaz de funcionar las 24hs del dia. 
-      Le ayuda a convertir cada visita o consulta en un cliente. Tambien puede gestionar las consultas y pedidos de los usuarios o clientes.</p>
-      <p>Cotorra es un <strong>robot chat</strong>, o <strong>chatbot</strong>, es decir un sistema automatizado que simula la conversacion con una persona.
-      Al ser un bot de chat automatizado permite atender todas las consultas de tus visitantes las 24hs, los 7 dias de la semana!
+      <h2 class="h2index">Tu sitio web, negocio o fanpage atendido las 24hs los 7 días de la semana</h2>
+      <p><strong>Cotorra</strong> es un <strong>servicio de atención online</strong> automatizado(un Chatbot, Robot Chat, Bot) capaz de funcionar las 24hs del día.
+      Le ayuda a convertir cada visita o consulta en un cliente. También puede gestionar las consultas y pedidos de los usuarios o clientes.</p>
+      <p>Cotorra es un <strong>robot chat</strong>, o <strong>chatbot</strong>, es decir un sistema automatizado que simula la conversación con una persona.
+      Al ser un bot de chat automatizado permite atender todas las consultas de tus visitantes las 24hs, los 7 días de la semana!
       Cotorra es un sistema flexible que puede ser adaptado a las necesidades del cliente o negocio.</p>
       <h2 class="h2index">¡Conectáte con más clientes y aumentá las ventas!</h2>
-      
+
       <a role="button" class="btn btn-default btn-lg" href="#conocemas">Conoce mas! <i class="fa fa-chevron-down"></i> </a>
-      
+
     </div>
     <div class="col-md-4 col-sm-4 mobile-image">
       <div class="mobile img-responsive">
@@ -32,19 +32,19 @@ permalink: index.html
   </div>
 
   <div class="row lg" id="conocemas">
-    <h2 class="generich2">Ventas, soporte, informacion</h2>
-    <h4 class="generich4">Asistente virtual constantemente mejorado y optimizado para prover el mejor soporte y mejorar las conversiones de venta.</h4>
-    
+    <h2 class="generich2">Ventas, soporte, información</h2>
+    <h4 class="generich4">Asistente virtual constantemente mejorado y optimizado para proveer el mejor soporte y mejorar las conversiones de venta.</h4>
+
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-facebook tilt icon-head"></i>
 	    <h4 class="title-head">Páginas de Facebook</h4>
-	    <p>Nuestro bot se integra directamente con tu pagina de facebook</p>
+	    <p>Nuestro bot se integra directamente con tu página de facebook</p>
     </div><!-- col-lg-4 -->
 
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-cloud icon-head"></i>
 	    <h4 class="title-head">Disponible desde cualquier lugar</h4>
-	    <p>Adicionalmente a la pagina de facebook, tus clientes pueden contactarte usando facebook messenger directamente desde tu sitio web.</p>
+	    <p>Adicionalmente a la página de facebook, tus clientes pueden contactarte usando facebook messenger directamente desde tu sitio web.</p>
     </div><!-- col-lg-4 -->
 
     <div class="col-lg-4 caracteristicas">
@@ -52,7 +52,7 @@ permalink: index.html
 	    <h4 class="title-head">Configurar horarios de atención</h4>
 	    <p>Si prefieres atender directamente las consultas tu mismo en horario laboral, puedes programar el horario, y el robot se encargara del resto.</p>
     </div><!-- col-lg-4 -->
-    
+
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-mobile icon-head"></i>
 	    <h4 class="title-head">Notificaciones Push</h4>
@@ -76,9 +76,9 @@ permalink: index.html
     <div class="col-md-6 col-sm-6">
     <h4>Contacto</h4>
 
-    <p>Queremos hablar con tantas personas como podamos, para conocer como interactuan con sus clientes.  
+    <p>Queremos hablar con tantas personas como podamos, para conocer como interactúan con sus clientes.  
     Completa el siguiente formulario y estaremos en contacto tan pronto como sea posible.</p>
-    
+
     <p>Gracias!</p>
       <form action="//formspree.io/contacto@ingeros.com" method="POST">
 	<div class="form-group">
@@ -101,29 +101,3 @@ permalink: index.html
       </form>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
