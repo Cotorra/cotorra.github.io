@@ -1,6 +1,6 @@
 {% assign base_url = site.baseurl | prepend: site.url %}
 
-{% assign url = page.permalink | prepend: base_url %}
+{% assign url = page.permalink | prepend: '/' | prepend: base_url %}
 
 
 
