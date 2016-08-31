@@ -94,7 +94,7 @@ permalink: index.html
 		  placeholder="Telefono" required>
 	</div>
 	<div class="form-group">
-	  <textarea name="body" id="message" class="form-control" width="100%" required></textarea>
+	  <textarea name="body" id="message" class="form-control" required></textarea>
 	</div>
 	<input type="hidden" name="_next" value="//cotorrachatbot.com/">
 	<button type="submit" class="btn btn-default btn-block">Enviar</button>
