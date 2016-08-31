@@ -33,11 +33,19 @@
 {% else %}
   {% assign keywords = site.keywords  %}
 {% endif %}
-  
+
+{% capture page_title %}
+  {% if page.title %}
+    {{ page.tile }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+{% endcapture %}
+{% assign page_title = page_title | strip_html | escape | strip | strip_newlines | truncate: 160 %}
+
 
     <!-- Generic metas -->
-    <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='text/html' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <meta name="description" content="{{ page_description }}" />
@@ -46,7 +54,7 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ base_url }}/sitemap.xml" />
     
     <!-- OpenGraph -->
-    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:title" content="{{ page_title }}" />
     <meta property="og:description" content="{{ page_description }}" />
     <meta property="og:image" content="{{ img }}" />
     <meta property="og:site_name" content="{{ site.name }}" />
@@ -60,7 +68,7 @@
     {% endif %}
     
     <!-- Twitter Card -->
-    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:title" content="{{ page_title }}" />
     <meta name="twitter:description" content="{{ page_description }}" />
     <meta name="twitter:card" content="summary" />
     {% if site.socialmedia.twitter %}

@@ -14,7 +14,7 @@ permalink: index.html
       Cotorra es un sistema flexible que puede ser adaptado a las necesidades del cliente o negocio.</p>
       <h2 class="h2index">¡Conectáte con más clientes y aumentá las ventas!</h2>
       
-      <a type="button" class="btn btn-default btn-lg" href="#conocemas">Conoce mas! <i class="fa fa-chevron-down"></i> </a>
+      <a role="button" class="btn btn-default btn-lg" href="#conocemas">Conoce mas! <i class="fa fa-chevron-down"></i> </a>
       
     </div>
     <div class="col-md-4 col-sm-4 mobile-image">
@@ -71,7 +71,7 @@ permalink: index.html
   </div>
   <div class="row blue">
     <div class="col-md-6 col-sm-6">
-      <iframe height="400" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-32.936447,-60.7208597&amp;spn=0.025669,0.055747&amp;z=10&amp;output=embed"></iframe>
+      <iframe height="400" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-32.936447,-60.7208597&amp;spn=0.025669,0.055747&amp;z=10&amp;output=embed"></iframe>
     </div>
     <div class="col-md-6 col-sm-6">
     <h4>Contacto</h4>
@@ -80,7 +80,7 @@ permalink: index.html
     Completa el siguiente formulario y estaremos en contacto tan pronto como sea posible.</p>
     
     <p>Gracias!</p>
-      <form role="form" action="//formspree.io/contacto@ingeros.com" method="POST">
+      <form action="//formspree.io/contacto@ingeros.com" method="POST">
 	<div class="form-group">
 	    <input type="text" class="form-control" id="nombre" name="nombre"
 		  placeholder="Nombre" required>
