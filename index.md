@@ -80,6 +80,12 @@ permalink: index.html
     Completa el siguiente formulario y estaremos en contacto tan pronto como sea posible.</p>
 
     <p>Gracias!</p>
+    <div class="fb-messengermessageus" 
+      messenger_app_id="1243750798976697" 
+      page_id="315051275552344"
+      color="blue"
+      size="standard" >
+    </div>
       <form action="//formspree.io/contacto@ingeros.com" method="POST">
 	<div class="form-group">
 	    <input type="text" class="form-control" id="nombre" name="nombre"
