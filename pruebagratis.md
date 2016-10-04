@@ -17,10 +17,7 @@ permalink: pruebagratis
       <a role="button" class="btn btn-default btn-lg" href="#conocemas">Conoce mas! <i class="fa fa-chevron-down"></i> </a>
 
     </div>
-    <div class="col-md-4 col-sm-4 mobile-image">
-      <iframe height="400" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-32.936447,-60.7208597&amp;spn=0.025669,0.055747&amp;z=10&amp;output=embed"></iframe>
-    </div>
-    <div class="col-md-6 col-sm-6" id="contacto">
+    <div class="col-md-4 col-sm-4" id="contacto">
     <h4>Prueba Gratis</h4>
 
     <p>Solo por esta semana, accede a la prueba gratuita de 14 dias de Cotorra.</p>
