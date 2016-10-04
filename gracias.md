@@ -1,7 +1,7 @@
 ---
 layout: default
 title Gracias!
-permalink: index.html
+permalink: thanks.html
 ---
 
   <div class="row blue">
