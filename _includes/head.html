@@ -6,6 +6,9 @@
     {% include meta.html %}
     {% include styles.html %}
     {% include fbapp.html %}
-    {% include schema.html %} 
+    {% include schema.html %}
+    {% if page.title == "Gracias!" %}
+      {% include fbpixel.html %}
+    {% endif %}
   </head>
 
