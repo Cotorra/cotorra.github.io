@@ -73,19 +73,13 @@ permalink: index.html
     <div class="col-md-6 col-sm-6">
       <iframe height="400" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-32.936447,-60.7208597&amp;spn=0.025669,0.055747&amp;z=10&amp;output=embed"></iframe>
     </div>
-    <div class="col-md-6 col-sm-6">
+    <div class="col-md-6 col-sm-6" id="contacto">
     <h4>Contacto</h4>
 
     <p>Queremos hablar con tantas personas como podamos, para conocer como interactúan con sus clientes.  
     Completa el siguiente formulario y estaremos en contacto tan pronto como sea posible.</p>
 
     <p>Gracias!</p>
-    <div class="fb-messengermessageus" 
-      messenger_app_id="1243750798976697" 
-      page_id="315051275552344"
-      color="blue"
-      size="standard" >
-    </div>
       <form action="//formspree.io/contacto@ingeros.com" method="POST">
 	<div class="form-group">
 	    <input type="text" class="form-control" id="nombre" name="nombre"
@@ -102,7 +96,7 @@ permalink: index.html
 	<div class="form-group">
 	  <textarea name="body" id="message" class="form-control" required></textarea>
 	</div>
-	<input type="hidden" name="_next" value="//cotorrachatbot.com/">
+	<input type="hidden" name="_next" value="//cotorrachatbot.com/thanks.html">
 	<button type="submit" class="btn btn-default btn-block">Enviar</button>
       </form>
     </div>
