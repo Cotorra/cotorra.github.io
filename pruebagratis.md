@@ -13,9 +13,6 @@ permalink: pruebagratis
       Al ser un bot de chat automatizado permite atender todas las consultas de tus visitantes las 24hs, los 7 días de la semana!
       Cotorra es un sistema flexible que puede ser adaptado a las necesidades del cliente o negocio.</p>
       <h2 class="h2index">¡Conectáte con más clientes y aumentá las ventas!</h2>
-
-      <a role="button" class="btn btn-default btn-lg" href="#conocemas">Conoce mas! <i class="fa fa-chevron-down"></i> </a>
-
     </div>
     <div class="col-md-4 col-sm-4" id="contacto">
     <h4>Prueba Gratis</h4>
@@ -39,12 +36,8 @@ permalink: pruebagratis
 	    <input type="text" class="form-control" id="fanpage" name="telefono"
 		  placeholder="Telefono">
 	</div>
-
-	<div class="form-group">
-	  <textarea name="body" id="message" class="form-control" required></textarea>
-	</div>
 	<input type="hidden" name="_next" value="http://cotorrachatbot.com/thanks.html">
-	<button type="submit" class="btn btn-default btn-block">Enviar</button>
+	<button type="submit" class="btn btn-danger btn-block">Prueba Gratis</button>
       </form>
     </div>
   </div>
