@@ -96,7 +96,7 @@ permalink: index.html
 	<div class="form-group">
 	  <textarea name="body" id="message" class="form-control" required></textarea>
 	</div>
-	<input type="hidden" name="_next" value="//cotorrachatbot.com/thanks.html">
+	<input type="hidden" name="_next" value="http://cotorrachatbot.com/thanks.html">
 	<button type="submit" class="btn btn-default btn-block">Enviar</button>
       </form>
     </div>
