@@ -1,6 +1,6 @@
 ---
 layout: default
-title Gracias!
+title: Gracias!
 permalink: thanks.html
 ---
 
