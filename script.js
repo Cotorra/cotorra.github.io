@@ -48,7 +48,7 @@ function initCotorra(data){
 		      "<span data-toggle=\"tooltip\" title=\"3 New Messages\" class=\"badge bg-red\">3</span>" +
 		      "<button class=\"btn btn-box-tool\" data-widget=\"collapse\"><i class=\"fa fa-minus\"></i></button>" +
 		      "<!-- In box-tools add this button if you intend to use the contacts pane -->" +
-		      "<button class=\"btn btn-box-tool\" data-toggle=\"tooltip\" title=\"Contacts\" data-widget=\"chat-" +pane-"toggle\"><i class=\"fa fa-comments\"></i></button>" +
+		      "<button class=\"btn btn-box-tool\" data-toggle=\"tooltip\" title=\"Contacts\" data-widget=\"chat-pane-toggle\"><i class=\"fa fa-comments\"></i></button>" +
 		      "<button class=\"btn btn-box-tool\" data-widget=\"remove\"><i class=\"fa fa-times\"></i></button>" +
 		    "</div>" +
 		  "</div><!-- /.box-header -->" +
@@ -61,7 +61,7 @@ function initCotorra(data){
 		          "<span class=\"direct-chat-name pull-left\">Alexander Pierce</span>" +
 		          "<span class=\"direct-chat-timestamp pull-right\">23 Jan 2:00 pm</span>" +
 		        "</div><!-- /.direct-chat-info -->" +
-		        "<img class=\"direct-chat-img\" src=\"../dist/img/user1-128x128.jpg\" alt=\"message user image\"><!-- /." +direct-chat-img -->
+		        "<img class=\"direct-chat-img\" src=\"../dist/img/user1-128x128.jpg\" alt=\"message user image\"><!-- /.direct-chat-img -->" +
 		        "<div class=\"direct-chat-text\">" +
 		          "Is this template really for free? That's unbelievable!" +
 		        "</div><!-- /.direct-chat-text -->" +
@@ -73,7 +73,7 @@ function initCotorra(data){
 		          "<span class=\"direct-chat-name pull-right\">Sarah Bullock</span>" +
 		          "<span class=\"direct-chat-timestamp pull-left\">23 Jan 2:05 pm</span>" +
 		        "</div><!-- /.direct-chat-info -->" +
-		        "<img class=\"direct-chat-img\" src=\"../dist/img/user3-128x128.jpg\" alt=\"message user image\"><!-- " +/."direct-chat-img -->" +
+		        "<img class=\"direct-chat-img\" src=\"../dist/img/user3-128x128.jpg\" alt=\"message user image\"><!--direct-chat-img -->" +
 		        "<div class=\"direct-chat-text\">" +
 		          "You better believe it!" +
 		        "</div><!-- /.direct-chat-text -->" +
