@@ -48,13 +48,10 @@ function initCotorra(data){
 		    "<h3 class=\"box-title\">Chat</h3>" +
 		    "<div class=\"box-tools pull-right\">" +
 		      "<span data-toggle=\"tooltip\" title=\"3 New Messages\" class=\"badge bg-red\">3</span>" +
-		      "<button class=\"btn btn-box-tool\" data-widget=\"collapse\"><i class=\"fa fa-minus\"></i></button>" +
-		      "<!-- In box-tools add this button if you intend to use the contacts pane -->" +
-		      "<button class=\"btn btn-box-tool\" data-toggle=\"tooltip\" title=\"Contacts\" data-widget=\"chat-pane-toggle\"><i class=\"fa fa-comments\"></i></button>" +
-		      "<button class=\"btn btn-box-tool\" data-widget=\"remove\"><i class=\"fa fa-times\"></i></button>" +
+		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\"></i></button>" +
 		    "</div>" +
 		  "</div><!-- /.box-header -->" +
-		  "<div class=\"box-body\">" +
+		  "<div class=\"box-body\" id=\"chat-body\">" +
 		    "<!-- Conversations are loaded here -->" +
 		    "<div class=\"direct-chat-messages\">" +
 		      "<!-- Message. Default to the left -->" +
