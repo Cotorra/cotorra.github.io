@@ -5,6 +5,26 @@ document.onreadystatechange = function () {
     }
 }
 
+function appendCSS(){
+	ct_ID = 0;
+    ct_urlCSS = ['/cotorrastyles.css'];
+
+    ct_urlCSS.forEach(function (item)
+    {
+    if (!document.getElementById("chat-css-"+ct_ID))
+        {
+            var link = document.createElement('link');
+            link.id   = "chat-css-"+ct_ID;
+            link.rel  = 'stylesheet';
+            link.type = 'text/css';
+            link.href = ct_global_url+item;
+            link.media = 'all';
+            ct_header.appendChild(link);
+            ct_ID++;
+        }
+    });
+}
+
 function initCotorra(data){
 	if (typeof jQuery != 'undefined') {
 
@@ -14,4 +34,7 @@ function initCotorra(data){
 
 	    alert("jQuery library is not found! Cotorra will not work.");
 	}
+	ct_global_url = "http://cotorrachatbot.com/"
+	ct_header = document.getElementsByTagName('head')[0],
+	appendCSS();
 }
