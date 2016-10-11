@@ -1,9 +1,17 @@
 /*! CotorraChatbot v0.1 http://cotorrachatbot.com | (c) 2016 Ingeros */
-if (typeof jQuery != 'undefined') {
+document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+    	initCotorra();
+    }
+}
 
-    alert("jQuery library is loaded!. Cotorra will not work.");
+function initCotorra(data){
+	if (typeof jQuery != 'undefined') {
 
-}else{
+	    alert("jQuery library is loaded!. Cotorra will work.");
 
-    alert("jQuery library is not found! Cotorra will work.");
+	}else{
+
+	    alert("jQuery library is not found! Cotorra will not work.");
+	}
 }
