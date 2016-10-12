@@ -95,7 +95,7 @@ function initCotorra(data){
 	    alert("jQuery library is not found! Cotorra will not work.");
 	}
 	ctGlobalURL = "http://cotorrachatbot.com"
-	ctGlobalURL = "web"
+	//ctGlobalURL = "web"
 	ctHeader = document.getElementsByTagName('head')[0],
 	ctBody = document.getElementsByTagName('body')[0],
 	appendCSS();
