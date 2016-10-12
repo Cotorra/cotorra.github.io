@@ -27,7 +27,6 @@ function appendCSS(){
 
 function initSocketio(){
    var socket;
-   alert("Inicio Scketio")
    socket = io.connect('http://' + "cotorra-testingarg.rhcloud.com" + ':' + "8000" + '/webchat');
         socket.on('connect', function() {
            socket.emit('joined', {});
