@@ -25,6 +25,66 @@ function appendCSS(){
     });
 }
 
+function initSocketio(){
+   var socket;
+   alert("Inicio Scketio")
+   socket = io.connect('http://' + "cotorra-testingarg.rhcloud.com" + ':' + location.port + '/webchat');
+        socket.on('connect', function() {
+           socket.emit('joined', {});
+        });
+        socket.on('status', function(data) {
+           $('#chat').append(
+                  '<div class="direct-chat-msg">'+
+                     '<div class="direct-chat-info clearfix">'+
+                        '<span class="direct-chat-name pull-left">'+"message.author"+'</span>'+
+                        '<span class="direct-chat-timestamp pull-right">'+ "message.createDate" +'</span>'+
+                     '</div>'+
+                     '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image">'+
+                     '<div class="direct-chat-text">'+
+                        data.msg +
+                     '</div>'+
+                  '</div>'
+           );
+           $('#chat').scrollTop($('#chat')[0].scrollHeight);
+        });
+        socket.on('message', function(data) {
+           $('#chat').append(
+                  '<div class="direct-chat-msg">'+
+                     '<div class="direct-chat-info clearfix">'+
+                        '<span class="direct-chat-name pull-left">'+"message.author"+'</span>'+
+                        '<span class="direct-chat-timestamp pull-right">'+ "message.createDate" +'</span>'+
+                     '</div>'+
+                     '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image">'+
+                     '<div class="direct-chat-text">'+
+                        data.msg +
+                     '</div>'+
+                  '</div>'
+             );
+           $('#chat').scrollTop($('#chat')[0].scrollHeight);
+        });
+        $('#messageText').keypress(function(e) {
+           var code = e.keyCode || e.which;
+           if (code == 13) {
+               text = $('#messageText').val();
+               $('#messageText').val('');
+               socket.emit('text', {msg: text});
+               $('#chat').append(
+                       '<div class="direct-chat-msg right">'+
+                        '<div class="direct-chat-info clearfix">'+
+                           '<span class="direct-chat-name pull-left">'+"message.author"+'</span>'+
+                           '<span class="direct-chat-timestamp pull-right">'+ "message.createDate" +'</span>'+
+                        '</div>'+
+                        '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image">'+
+                        '<div class="direct-chat-text">'+
+                           text +
+                        '</div>'+
+                       '</div>'
+               );
+               $('#chat').scrollTop($('#chat')[0].scrollHeight);
+           }
+        });
+}
+
 function initCotorra(data){
 	if (typeof jQuery != 'undefined') {
 
@@ -35,7 +95,7 @@ function initCotorra(data){
 	    alert("jQuery library is not found! Cotorra will not work.");
 	}
 	ctGlobalURL = "http://cotorrachatbot.com"
-	//ctGlobalURL = "cotorra.github.io"
+	ctGlobalURL = "web"
 	ctHeader = document.getElementsByTagName('head')[0],
 	ctBody = document.getElementsByTagName('body')[0],
 	appendCSS();
@@ -43,7 +103,7 @@ function initCotorra(data){
 	var ctdiv = document.createElement("div");
 	ctdiv.className = 'navbar-fixed-bottom col-md-3';
     ctdiv.innerHTML =
-		"<div class=\"box box-danger direct-chat direct-chat-danger\">" +
+		"<div class=\"box box-danger direct-chat direct-chat-danger box-solid\">" +
 		  "<div class=\"box-header with-border\">" +
 		    "<h3 class=\"box-title\">Chat</h3>" +
 		    "<div class=\"box-tools pull-right\">" +
@@ -53,7 +113,7 @@ function initCotorra(data){
 		  "</div><!-- /.box-header -->" +
 		  "<div class=\"box-body\" id=\"chat-body\">" +
 		    "<!-- Conversations are loaded here -->" +
-		    "<div class=\"direct-chat-messages\">" +
+		    "<div class=\"direct-chat-messages\" id=\"chat\">" +
 		      "<!-- Message. Default to the left -->" +
 		      "<div class=\"direct-chat-msg\">" +
 		        "<div class=\"direct-chat-info clearfix\">" +
@@ -77,8 +137,20 @@ function initCotorra(data){
 		          "You better believe it!" +
 		        "</div><!-- /.direct-chat-text -->" +
 		      "</div><!-- /.direct-chat-msg -->" +
-		    "</div><!--/.direct-chat-messages-->";
+		    "</div><!--/.direct-chat-messages-->" +
+		  "</div><!-- /.box-body -->"+
+          "<div class=\"box-footer\">"+
+            "<div class=\"input-group\">"+
+              "<input type=\"text\" name=\"message\" placeholder=\"Type Message ...\" class=\"form-control\" id=\"messageText\">"+
+              "<span class=\"input-group-btn\">"+
+                "<button type=\"button\" class=\"btn btn-danger btn-flat\" id=\"sendMessage\">Send</button>"+
+              "</span>"+
+            "</div>"+
+            "<span class=\"direct-chat-timestamp pull-right\">Powered by <a href=\"http://cotorrachatbot.com\">Cotorra</span>" +
+          "</div><!-- /.box-footer-->"+
+		"</div><!--/.direct-chat -->";
 
-	ctBody.appendChild(ctdiv);	
+	ctBody.appendChild(ctdiv);
+   initSocketio();
 
 }
