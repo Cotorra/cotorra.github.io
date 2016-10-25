@@ -47,7 +47,7 @@ function initSocketio(){
             }
         });
         socket.on('status', function(data) {
-           Cookies.set('id') = data.id;
+           Cookies.set('id', data.id);
         });
         socket.on('message', function(data) {
            $('#chat').append(
