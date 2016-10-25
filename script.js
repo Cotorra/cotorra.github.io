@@ -6,7 +6,6 @@ document.onreadystatechange = function () {
 }
 
 function appendCSS(){
-	ctID = 0;
     ctURLCSS = ['/cotorrastyles.css'];
 
     ctURLCSS.forEach(function (item)
@@ -24,6 +23,18 @@ function appendCSS(){
         }
     });
 }
+
+function insertScript(item){
+   if (!document.getElementById("chat-js-"+ctID))
+      {
+         var script = document.createElement("script");
+         script.type = 'text/javascript';
+         script.id = "chat-js-"+ctID;
+         script.src = ctGlobalURL+item;
+         ctBody.appendChild(script);
+         ctID++;
+      }
+   }
 
 function initSocketio(){
    var socket;
@@ -95,8 +106,9 @@ function initCotorra(data){
 	}
 	ctGlobalURL = "http://cotorrachatbot.com"
 	//ctGlobalURL = "web"
-	ctHeader = document.getElementsByTagName('head')[0],
-	ctBody = document.getElementsByTagName('body')[0],
+	ctHeader = document.getElementsByTagName('head')[0];
+	ctBody = document.getElementsByTagName('body')[0];
+   ctID = 0;
 	appendCSS();
 
 	var ctdiv = document.createElement("div");
@@ -137,6 +149,13 @@ function initCotorra(data){
 		"</div><!--/.direct-chat -->";
 
 	ctBody.appendChild(ctdiv);
+
+   ctURLJS = ['/js.cookie.js'];
+   ctURLJS.forEach(function (item){
+      insertScript(item)
+      }
+   )
+
    initSocketio();
 
 }
