@@ -41,6 +41,13 @@ function initSocketio(){
    socket = io.connect('http://' + "cotorra-testingarg.rhcloud.com" + ':' + "8000" + '/webchat');
         socket.on('connect', function() {
            socket.emit('joined', {});
+
+           if (Cookies.get('id')){
+             alert("Cookie existe")
+            }else{
+             alert("Cookie no existe")
+            }
+            
         });
         socket.on('status', function(data) {
            $('#chat').append(
