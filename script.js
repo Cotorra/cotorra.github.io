@@ -40,29 +40,14 @@ function initSocketio(){
    var socket;
    socket = io.connect('http://' + "cotorra-testingarg.rhcloud.com" + ':' + "8000" + '/webchat');
         socket.on('connect', function() {
-           socket.emit('joined', {});
-
-           if (Cookies.get('id')){
-             alert("Cookie existe")
+            if (Cookies.get('id')){
+               socket.emit('joined', {id: Cookies.get('id')});
             }else{
-             alert("Cookie no existe")
+               socket.emit('joined', {});
             }
-            
         });
         socket.on('status', function(data) {
-           $('#chat').append(
-                  '<div class="direct-chat-msg">'+
-                     '<div class="direct-chat-info clearfix">'+
-                        '<span class="direct-chat-name pull-left">'+"message.author"+'</span>'+
-                        '<span class="direct-chat-timestamp pull-right">'+ "message.createDate" +'</span>'+
-                     '</div>'+
-                     '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image">'+
-                     '<div class="direct-chat-text">'+
-                        data.msg +
-                     '</div>'+
-                  '</div>'
-           );
-           $('#chat').scrollTop($('#chat')[0].scrollHeight);
+           Cookies.set('id') = data.id;
         });
         socket.on('message', function(data) {
            $('#chat').append(
