@@ -50,13 +50,20 @@ function initSocketio(){
            Cookies.set('id', data.id);
         });
         socket.on('message', function(data) {
+           var d = new Date();
+           var datenow =  d.getDate()+'/'
+                  +(d.getMonth()+1)+'/'
+                  + d.getFullYear() +'@'
+                  + d.getHours() + ":"
+                  + d.getMinutes() + ":"
+                  + d.getSeconds();
            $('#chat').append(
                   '<div class="direct-chat-msg">'+
                      '<div class="direct-chat-info clearfix">'+
-                        '<span class="direct-chat-name pull-left">'+"message.author"+'</span>'+
-                        '<span class="direct-chat-timestamp pull-right">'+ "message.createDate" +'</span>'+
+                        '<span class="direct-chat-name pull-left">'+"Laura Tarot"+'</span>'+
+                        '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
                      '</div>'+
-                     '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image">'+
+                     '<img class="direct-chat-img" src=\"http://bootdey.com/img/Content/user_2.jpg\" alt="message user image">'+
                      '<div class="direct-chat-text">'+
                         data.msg +
                      '</div>'+
@@ -67,16 +74,23 @@ function initSocketio(){
         $('#messageText').keypress(function(e) {
            var code = e.keyCode || e.which;
            if (code == 13) {
+             var d = new Date();
+             var datenow =  d.getDate()+'/'
+                    +(d.getMonth()+1)+'/'
+                    + d.getFullYear() +'@'
+                    + d.getHours() + ":"
+                    + d.getMinutes() + ":"
+                    + d.getSeconds();
+
                text = $('#messageText').val();
                $('#messageText').val('');
                socket.emit('text', {msg: text});
                $('#chat').append(
                        '<div class="direct-chat-msg right">'+
                         '<div class="direct-chat-info clearfix">'+
-                           '<span class="direct-chat-name pull-left">'+"message.author"+'</span>'+
-                           '<span class="direct-chat-timestamp pull-right">'+ "message.createDate" +'</span>'+
+                           '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
                         '</div>'+
-                        '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image">'+
+                        '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="User image">'+
                         '<div class="direct-chat-text">'+
                            text +
                         '</div>'+
