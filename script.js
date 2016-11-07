@@ -70,6 +70,7 @@ function initSocketio(){
                   '</div>'
              );
            $('#chat').scrollTop($('#chat')[0].scrollHeight);
+           ctNotificationAudio.play();
         });
         $('#messageText').keypress(function(e) {
            var code = e.keyCode || e.which;
@@ -114,6 +115,7 @@ function initCotorra(data){
 	//ctGlobalURL = "web"
 	ctHeader = document.getElementsByTagName('head')[0];
 	ctBody = document.getElementsByTagName('body')[0];
+   ctNotificationAudio = new Audio( ctGlobalURL + '/nuevomensaje.mp3' );
    ctID = 0;
 	appendCSS();
 
