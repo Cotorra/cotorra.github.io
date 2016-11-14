@@ -65,7 +65,7 @@ function initSocketio(){
                         '<span class="direct-chat-name pull-left">'+ctagentName+'</span>'+
                         '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
                      '</div>'+
-                     '<img class="direct-chat-img" src=\"'+ctagentAvatar+'\" alt="message user image">'+
+                     '<img class="direct-chat-img" src=\"'+ctAppURL+ctagentAvatar+'\" alt="message user image">'+
                      '<div class="direct-chat-text">'+
                         data.msg +
                      '</div>'+
@@ -93,7 +93,6 @@ function initSocketio(){
                         '<div class="direct-chat-info clearfix">'+
                            '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
                         '</div>'+
-                        '<img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="User image">'+
                         '<div class="direct-chat-text">'+
                            text +
                         '</div>'+
@@ -114,6 +113,7 @@ function initCotorra(data){
 	    alert("jQuery library is not found! Cotorra will not work.");
 	}
 	ctGlobalURL = "http://cotorrachatbot.com"
+   ctAppURL = "http://app.cotorrachatbot.com"
 	//ctGlobalURL = "web"
 	ctHeader = document.getElementsByTagName('head')[0];
 	ctBody = document.getElementsByTagName('body')[0];
