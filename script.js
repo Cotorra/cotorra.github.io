@@ -65,7 +65,7 @@ function initSocketio(){
                         '<span class="direct-chat-name pull-left">'+ctagentName+'</span>'+
                         '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
                      '</div>'+
-                     '<img class="direct-chat-img" src=\"'+ctagentAvatar+\'" alt="message user image">'+
+                     '<img class="direct-chat-img" src=\"'+ctagentAvatar+'\" alt="message user image">'+
                      '<div class="direct-chat-text">'+
                         data.msg +
                      '</div>'+
