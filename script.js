@@ -137,16 +137,6 @@ function initCotorra(data){
 		  "<div class=\"box-body\" id=\"chat-body\">" +
 		    "<!-- Conversations are loaded here -->" +
 		    "<div class=\"direct-chat-messages\" id=\"chat\">" +
-		      "<!-- Message. Default to the left -->" +
-		      "<div class=\"direct-chat-msg\">" +
-		        "<div class=\"direct-chat-info clearfix\">" +
-		          "<span class=\"direct-chat-name pull-left\">Laura Tarot</span>" +
-		          "<span class=\"direct-chat-timestamp pull-right\">23 Jan 2:00 pm</span>" +
-		        "</div><!-- /.direct-chat-info -->" +
-		        "<img class=\"direct-chat-img\" src=\"http://bootdey.com/img/Content/user_2.jpg\" alt=\"message user image\"><!-- /.direct-chat-img -->" +
-		        "<div class=\"direct-chat-text\">" +
-		          "Hola!" +
-		        "</div><!-- /.direct-chat-text -->" +
 		      "</div><!-- /.direct-chat-msg -->" +
 		  "</div><!-- /.box-body -->"+
           "<div class=\"box-footer\">"+
