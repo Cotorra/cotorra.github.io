@@ -48,6 +48,8 @@ function initSocketio(){
         });
         socket.on('status', function(data) {
            Cookies.set('id', data.id);
+           ctagentName = data.agentName;
+           ctagentAvatar = data.avatar;
         });
         socket.on('message', function(data) {
            var d = new Date();
@@ -60,10 +62,10 @@ function initSocketio(){
            $('#chat').append(
                   '<div class="direct-chat-msg">'+
                      '<div class="direct-chat-info clearfix">'+
-                        '<span class="direct-chat-name pull-left">'+"Laura Tarot"+'</span>'+
+                        '<span class="direct-chat-name pull-left">'+ctagentName+'</span>'+
                         '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
                      '</div>'+
-                     '<img class="direct-chat-img" src=\"http://bootdey.com/img/Content/user_2.jpg\" alt="message user image">'+
+                     '<img class="direct-chat-img" src=\"'+ctagentAvatar+\'" alt="message user image">'+
                      '<div class="direct-chat-text">'+
                         data.msg +
                      '</div>'+
@@ -117,6 +119,8 @@ function initCotorra(data){
 	ctBody = document.getElementsByTagName('body')[0];
    ctNotificationAudio = new Audio( ctGlobalURL + '/nuevomensaje.mp3' );
    ctID = 0;
+   ctagentName = '';
+   ctagentAvatar = '';
 	appendCSS();
 
 	var ctdiv = document.createElement("div");
