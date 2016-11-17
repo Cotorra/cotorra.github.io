@@ -112,7 +112,7 @@ function initCotorra(data){
 
 	    alert("jQuery library is not found! Cotorra will not work.");
 	}
-	ctGlobalURL = "http://devcotorra-testingarg.rhcloud.com"
+	ctGlobalURL = "http://cotorrachatbot.com"
    ctAppURL = "http://devcotorra-testingarg.rhcloud.com"
 	//ctGlobalURL = "web"
 	ctHeader = document.getElementsByTagName('head')[0];
