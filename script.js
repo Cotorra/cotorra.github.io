@@ -130,7 +130,6 @@ function initCotorra(data){
 		  "<div class=\"box-header with-border\">" +
 		    "<h3 class=\"box-title\">Chat</h3>" +
 		    "<div class=\"box-tools pull-right\">" +
-		      "<span data-toggle=\"tooltip\" title=\"3 New Messages\" class=\"badge bg-red\">3</span>" +
 		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\"></i></button>" +
 		    "</div>" +
 		  "</div><!-- /.box-header -->" +
