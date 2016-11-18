@@ -151,12 +151,15 @@ function initCotorra(data){
 
 	ctBody.appendChild(ctdiv);
 
-   ctURLJS = ['/js.cookie.js', '/socket.io.min.js'];
+   ctURLJS = ['/js.cookie.js'];
    ctURLJS.forEach(function (item){
       insertScript(item)
       }
    )
+    $.getScript(ctGlobalURL+'/socket.io.min.js', function () {
+            console.log("Script loaded");
+            initSocketio();
+        }); 
 
-   initSocketio();
 
 }
