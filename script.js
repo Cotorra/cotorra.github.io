@@ -37,6 +37,9 @@ function insertScript(item){
    }
 
 function initSocketio(){
+   while (typeof io == 'undefined'){
+      
+   }
    var socket;
    socket = io.connect('http://' + "cotorra-testingarg.rhcloud.com" + ':' + "8000" + '/webchat');
         socket.on('connect', function() {
