@@ -130,7 +130,7 @@ function initCotorra(data){
 		  "<div class=\"box-header with-border\">" +
 		    "<h3 class=\"box-title\">Chat</h3>" +
 		    "<div class=\"box-tools pull-right\">" +
-		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\"></i></button>" +
+		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\">-</i></button>" +
 		    "</div>" +
 		  "</div><!-- /.box-header -->" +
 		  "<div class=\"box-body\" id=\"chat-body\">" +
@@ -140,9 +140,9 @@ function initCotorra(data){
 		  "</div><!-- /.box-body -->"+
           "<div class=\"box-footer\">"+
             "<div class=\"input-group\">"+
-              "<input type=\"text\" name=\"message\" placeholder=\"Type Message ...\" class=\"form-control\" id=\"messageText\">"+
+              "<input type=\"text\" name=\"message\" placeholder=\"Escribir mensaje ...\" class=\"form-control\" id=\"messageText\">"+
               "<span class=\"input-group-btn\">"+
-                "<button type=\"button\" class=\"btn btn-danger btn-flat\" id=\"sendMessage\">Send</button>"+
+                "<button type=\"button\" class=\"btn btn-danger btn-flat\" id=\"sendMessage\">Enviar</button>"+
               "</span>"+
             "</div>"+
             "<span class=\"direct-chat-timestamp pull-right\">Powered by <a href=\"http://cotorrachatbot.com\">Cotorra</span>" +
