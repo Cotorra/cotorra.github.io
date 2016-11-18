@@ -3,13 +3,13 @@
  * ----------------------
  */
 
-.navbar-fixed-bottom { border-top: 0; border-bottom: 4px dashed; border-bottom: 4px solid \9; content: ""; }
-.navbar-fixed-bottom { top: auto; bottom: 100%; margin-bottom: 2px; }
-
-@media (min-width: 768px) { .navbar-collapse { width: auto; border-top: 0; box-shadow: none; }
-  .navbar-collapse.collapse { display: block !important; height: auto !important; padding-bottom: 0; overflow: visible !important; }
-  .navbar-collapse.in { overflow-y: visible; }
-  .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse { padding-left: 0; padding-right: 0; } }
+.navbar-fixed-bottom {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse { max-height: 340px; }
 @media (max-device-width: 480px) and (orientation: landscape) { .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse { max-height: 200px; } }
