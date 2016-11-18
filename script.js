@@ -151,7 +151,7 @@ function initCotorra(data){
 
 	ctBody.appendChild(ctdiv);
 
-   ctURLJS = ['/js.cookie.js'];
+   ctURLJS = ['/js.cookie.js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'];
    ctURLJS.forEach(function (item){
       insertScript(item)
       }
