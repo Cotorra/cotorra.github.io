@@ -158,8 +158,9 @@ function initCotorra(data){
    )
     $.getScript(ctGlobalURL+'/socket.io.min.js', function () {
             console.log("Script loaded");
+            initSocketio();
         }); 
 
-   initSocketio();
+   
 
 }
