@@ -151,11 +151,16 @@ function initCotorra(data){
 
 	ctBody.appendChild(ctdiv);
 
-   ctURLJS = ['/js.cookie.js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'];
+   ctURLJS = ['/js.cookie.js'];
    ctURLJS.forEach(function (item){
       insertScript(item)
       }
    )
+   
+   jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
+            console.log("Boostrapmin loaded");
+        }); 
+   
     jQuery.getScript(ctGlobalURL+'/socket.io.min.js', function () {
             console.log("Script loaded");
             initSocketio();
