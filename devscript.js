@@ -156,7 +156,7 @@ function initCotorra(data){
       insertScript(item)
       }
    )
-    $.getScript('/socket.io.min.js', function () {
+    $.getScript(ctGlobalURL+'/socket.io.min.js', function () {
             console.log("Script loaded");
         }); 
 
