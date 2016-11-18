@@ -59,7 +59,7 @@ function initSocketio(){
                   + d.getHours() + ":"
                   + d.getMinutes() + ":"
                   + d.getSeconds();
-           $('#chat').append(
+           jQuery('#chat').append(
                   '<div class="direct-chat-msg">'+
                      '<div class="direct-chat-info clearfix">'+
                         '<span class="direct-chat-name pull-left">'+ ctagentName +'</span>'+
@@ -71,10 +71,10 @@ function initSocketio(){
                      '</div>'+
                   '</div>'
              );
-           $('#chat').scrollTop($('#chat')[0].scrollHeight);
+           jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
            ctNotificationAudio.play();
         });
-        $('#messageText').keypress(function(e) {
+        jQuery('#messageText').keypress(function(e) {
            var code = e.keyCode || e.which;
            if (code == 13) {
              var d = new Date();
@@ -85,10 +85,10 @@ function initSocketio(){
                     + d.getMinutes() + ":"
                     + d.getSeconds();
 
-               text = $('#messageText').val();
-               $('#messageText').val('');
+               text = jQuery('#messageText').val();
+               jQuery('#messageText').val('');
                socket.emit('text', {msg: text});
-               $('#chat').append(
+               jQuery('#chat').append(
                        '<div class="direct-chat-msg right">'+
                         '<div class="direct-chat-info clearfix">'+
                            '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
@@ -98,7 +98,7 @@ function initSocketio(){
                         '</div>'+
                        '</div>'
                );
-               $('#chat').scrollTop($('#chat')[0].scrollHeight);
+               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
            }
         });
 }
@@ -156,7 +156,7 @@ function initCotorra(data){
       insertScript(item)
       }
    )
-    $.getScript(ctGlobalURL+'/socket.io.min.js', function () {
+    jQuery.getScript(ctGlobalURL+'/socket.io.min.js', function () {
             console.log("Script loaded");
             initSocketio();
         }); 
