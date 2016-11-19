@@ -124,7 +124,7 @@ function initCotorra(data){
 	appendCSS();
 
 	var ctdiv = document.createElement("div");
-	ctdiv.className = 'navbar-fixed-bottom col-md-3 col-xs-3 col-sm-3';
+	ctdiv.className = 'navbar-fixed-bottom col-md-3 col-xs-6 col-sm-6';
     ctdiv.innerHTML =
 		"<div class=\"box box-danger direct-chat direct-chat-danger box-solid\">" +
 		  "<div class=\"box-header with-border\">" +

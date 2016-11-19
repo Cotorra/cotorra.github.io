@@ -124,7 +124,7 @@ function initCotorra(data){
 	appendCSS();
 
 	var ctdiv = document.createElement("div");
-	ctdiv.className = 'navbar-fixed-bottom col-md-3';
+	ctdiv.className = 'navbar-fixed-bottom col-md-3 col-xs-6 col-sm-6';
     ctdiv.innerHTML =
 		"<div class=\"box box-danger direct-chat direct-chat-danger box-solid\">" +
 		  "<div class=\"box-header with-border\">" +
@@ -133,7 +133,7 @@ function initCotorra(data){
 		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\">-</i></button>" +
 		    "</div>" +
 		  "</div><!-- /.box-header -->" +
-		  "<div class=\"box-body\" id=\"chat-body\">" +
+		  "<div class=\"box-body collapse\" id=\"chat-body\">" +
 		    "<!-- Conversations are loaded here -->" +
 		    "<div class=\"direct-chat-messages\" id=\"chat\">" +
 		      "</div><!-- /.direct-chat-msg -->" +
