@@ -142,9 +142,9 @@ function initCotorra(data){
 		  "</div><!-- /.box-body -->"+
           "<div class=\"box-footer\">"+
             "<div class=\"input-group\">"+
-              "<input type=\"text\" name=\"message\" placeholder=\"Type Message ...\" class=\"form-control\" id=\"messageText\">"+
+              "<input type=\"text\" name=\"message\" placeholder=\"Escribir mensaje ...\" class=\"form-control\" id=\"messageText\">"+
               "<span class=\"input-group-btn\">"+
-                "<button type=\"button\" class=\"btn btn-danger btn-flat\" id=\"sendMessage\">Send</button>"+
+                "<button type=\"button\" class=\"btn btn-danger btn-flat\" id=\"sendMessage\">Enviar</button>"+
               "</span>"+
             "</div>"+
             "<span class=\"direct-chat-timestamp pull-right\">Powered by <a href=\"http://cotorrachatbot.com\">Cotorra</span>" +
@@ -159,7 +159,7 @@ function initCotorra(data){
       }
    )
    //Manera fea para verificar si estam los plugins de bootstrap
-   if(typeof($.fn.popover) != 'undefined'){
+   if(typeof($.fn.popover) == 'undefined'){
       jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
                console.log("Boostrapmin loaded");
             });
