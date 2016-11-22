@@ -71,7 +71,7 @@ function initSocketio(){
                      '</div>'+
                   '</div>'
              );
-           $('#chat-body').collapse('show');
+           jQuery('#chat-body').collapse('show');
            jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
            ctNotificationAudio.play();
         });
@@ -99,7 +99,7 @@ function initSocketio(){
                         '</div>'+
                        '</div>'
                );
-               $('#chat-body').collapse('show');
+               jQuery('#chat-body').collapse('show');
                jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
            }
         });
