@@ -71,6 +71,7 @@ function initSocketio(){
                      '</div>'+
                   '</div>'
              );
+           $('#chat-body').collapse('show');
            $('#chat').scrollTop($('#chat')[0].scrollHeight);
            ctNotificationAudio.play();
         });
@@ -98,6 +99,7 @@ function initSocketio(){
                         '</div>'+
                        '</div>'
                );
+               $('#chat-body').collapse('show');
                $('#chat').scrollTop($('#chat')[0].scrollHeight);
            }
         });
@@ -156,11 +158,14 @@ function initCotorra(data){
       insertScript(item)
       }
    )
-    $.getScript(ctGlobalURL+'/socket.io.min.js', function () {
+   //Manera fea para verificar si estam los plugins de bootstrap
+   if(typeof($.fn.popover) != 'undefined'){
+      jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
+               console.log("Boostrapmin loaded");
+            });
+   }
+   jQuery.getScript(ctGlobalURL+'/socket.io.min.js', function () {
             console.log("Script loaded");
             initSocketio();
-        }); 
-
-   
-
+        });
 }
