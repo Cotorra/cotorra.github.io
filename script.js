@@ -160,7 +160,7 @@ function initCotorra(data){
    )
 
    //Manera fea para verificar si estam los plugins de bootstrap
-   if(typeof($.fn.popover) == 'undefined'){
+   if(typeof(jQuery.fn.popover) == 'undefined'){
       jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
                console.log("Boostrapmin loaded");
             });
