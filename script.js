@@ -1,9 +1,12 @@
 /*! CotorraChatbot v0.1 http://cotorrachatbot.com | (c) 2016 Ingeros */
+
+
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
     	initCotorra();
     }
 }
+
 
 function appendCSS(){
     ctURLCSS = ['/cotorrastyles.css'];
@@ -59,7 +62,7 @@ function initSocketio(){
                   + d.getHours() + ":"
                   + d.getMinutes() + ":"
                   + d.getSeconds();
-           jQuery('#chat').append(
+           $('#chat').append(
                   '<div class="direct-chat-msg">'+
                      '<div class="direct-chat-info clearfix">'+
                         '<span class="direct-chat-name pull-left">'+ ctagentName +'</span>'+
@@ -71,40 +74,76 @@ function initSocketio(){
                      '</div>'+
                   '</div>'
              );
-           jQuery('#chat-body').collapse('show');
-           jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
+           $('#chat-body').collapse('show');
+           $('#chat').scrollTop($('#chat')[0].scrollHeight);
            ctNotificationAudio.play();
         });
-        jQuery('#messageText').keypress(function(e) {
+        $('#messageText').keypress(function(e){
+           var msg = getMessage();
            var code = e.keyCode || e.which;
-           if (code == 13) {
-             var d = new Date();
-             var datenow =  d.getDate()+'/'
-                    +(d.getMonth()+1)+'/'
-                    + d.getFullYear() +'@'
-                    + d.getHours() + ":"
-                    + d.getMinutes() + ":"
-                    + d.getSeconds();
-
-               text = jQuery('#messageText').val();
-               jQuery('#messageText').val('');
-               socket.emit('text', {msg: text});
-               jQuery('#chat').append(
-                       '<div class="direct-chat-msg right">'+
-                        '<div class="direct-chat-info clearfix">'+
-                           '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
-                        '</div>'+
-                        '<div class="direct-chat-text">'+
-                           text +
-                        '</div>'+
-                       '</div>'
-               );
-               jQuery('#chat-body').collapse('show');
-               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
+           if (code == 13 && isValidMessage(msg)) {
+               submitMessage(socket,msg);
+               drawBubble(getFormatedDate(),msg);
+               cleanMessageArea();
+               $('#chat-body').collapse('show');
+               $('#chat').scrollTop($('#chat')[0].scrollHeight);
            }
         });
+        $('#sendMessage').click(function() {
+            var msg = getMessage();
+            if(isValidMessage(msg)){
+               submitMessage(socket,msg);
+               drawBubble(getFormatedDate(),msg);
+               cleanMessageArea();
+               $('#chat-body').collapse('show');
+               $('#chat').scrollTop($('#chat')[0].scrollHeight);
+               }
+        });
+
+}
+function drawBubble(date, msg){
+  $('#chat').append(
+     '<div class="direct-chat-msg right">'+
+      '<div class="direct-chat-info clearfix">'+
+         '<span class="direct-chat-timestamp pull-right">'+ date +'</span>'+
+      '</div>'+
+      '<div class="direct-chat-text">'+
+         msg +
+      '</div>'+
+     '</div>'
+   );
+}
+function htmlEncode(value){
+  return $('<div/>').text(value).html();
 }
 
+function htmlDecode(value){
+  return $('<div/>').html(value).text();
+}
+
+function cleanMessageArea(){
+  $('#messageText').val('');
+}
+function getMessage(){
+  return htmlEncode($('#messageText').val());
+}
+function isValidMessage(msg){
+  return !(new RegExp(/^\s*$/)).test(msg);
+}
+
+function getFormatedDate(){
+   var d = new Date();
+   return d.getDate()+'/'
+          +(d.getMonth()+1)+'/'
+          + d.getFullYear() +'@'
+          + d.getHours() + ":"
+          + d.getMinutes() + ":"
+          + d.getSeconds();
+
+}
+function submitMessage(socket,text){
+  socket.emit('text', {msg: text});
+}
 function initCotorra(data){
 	if (typeof jQuery != 'undefined') {
 
@@ -158,9 +197,8 @@ function initCotorra(data){
       insertScript(item)
       }
    )
-
    //Manera fea para verificar si estam los plugins de bootstrap
-   if(typeof(jQuery.fn.popover) == 'undefined'){
+   if(typeof($.fn.popover) == 'undefined'){
       jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
                console.log("Boostrapmin loaded");
             });
