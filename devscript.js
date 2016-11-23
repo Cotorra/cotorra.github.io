@@ -1,14 +1,12 @@
 /*! CotorraChatbot v0.1 http://cotorrachatbot.com | (c) 2016 Ingeros */
-$(function() {
-    initCotorra();
-});
-/*
+
+
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
     	initCotorra();
     }
 }
-*/
+
 
 function appendCSS(){
     ctURLCSS = ['/cotorrastyles.css'];
