@@ -62,7 +62,7 @@ function initSocketio(){
                   + d.getHours() + ":"
                   + d.getMinutes() + ":"
                   + d.getSeconds();
-           $('#chat').append(
+           jQuery('#chat').append(
                   '<div class="direct-chat-msg">'+
                      '<div class="direct-chat-info clearfix">'+
                         '<span class="direct-chat-name pull-left">'+ ctagentName +'</span>'+
@@ -74,35 +74,35 @@ function initSocketio(){
                      '</div>'+
                   '</div>'
              );
-           $('#chat-body').collapse('show');
-           $('#chat').scrollTop($('#chat')[0].scrollHeight);
+           jQuery('#chat-body').collapse('show');
+           jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
            ctNotificationAudio.play();
         });
-        $('#messageText').keypress(function(e){
+        jQuery('#messageText').keypress(function(e){
            var msg = getMessage();
            var code = e.keyCode || e.which;
            if (code == 13 && isValidMessage(msg)) {
                submitMessage(socket,msg);
                drawBubble(getFormatedDate(),msg);
                cleanMessageArea();
-               $('#chat-body').collapse('show');
-               $('#chat').scrollTop($('#chat')[0].scrollHeight);
+               jQuery('#chat-body').collapse('show');
+               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
            }
         });
-        $('#sendMessage').click(function() {
+        jQuery('#sendMessage').click(function() {
             var msg = getMessage();
             if(isValidMessage(msg)){
                submitMessage(socket,msg);
                drawBubble(getFormatedDate(),msg);
                cleanMessageArea();
-               $('#chat-body').collapse('show');
-               $('#chat').scrollTop($('#chat')[0].scrollHeight);
+               jQuery('#chat-body').collapse('show');
+               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
                }
         });
 
 }
 function drawBubble(date, msg){
-  $('#chat').append(
+  jQuery('#chat').append(
      '<div class="direct-chat-msg right">'+
       '<div class="direct-chat-info clearfix">'+
          '<span class="direct-chat-timestamp pull-right">'+ date +'</span>'+
@@ -114,18 +114,18 @@ function drawBubble(date, msg){
    );
 }
 function htmlEncode(value){
-  return $('<div/>').text(value).html();
+  return jQuery('<div/>').text(value).html();
 }
 
 function htmlDecode(value){
-  return $('<div/>').html(value).text();
+  return jQuery('<div/>').html(value).text();
 }
 
 function cleanMessageArea(){
-  $('#messageText').val('');
+  jQuery('#messageText').val('');
 }
 function getMessage(){
-  return htmlEncode($('#messageText').val());
+  return htmlEncode(jQuery('#messageText').val());
 }
 function isValidMessage(msg){
   return !(new RegExp(/^\s*$/)).test(msg);
@@ -198,7 +198,7 @@ function initCotorra(data){
       }
    )
    //Manera fea para verificar si estam los plugins de bootstrap
-   if(typeof($.fn.popover) == 'undefined'){
+   if(typeof(jQuery.fn.popover) == 'undefined'){
       jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
                console.log("Boostrapmin loaded");
             });
