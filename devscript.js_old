@@ -1,12 +1,9 @@
 /*! CotorraChatbot v0.1 http://cotorrachatbot.com | (c) 2016 Ingeros */
-
-
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
     	initCotorra();
     }
 }
-
 
 function appendCSS(){
     ctURLCSS = ['/cotorrastyles.css'];
@@ -62,7 +59,7 @@ function initSocketio(){
                   + d.getHours() + ":"
                   + d.getMinutes() + ":"
                   + d.getSeconds();
-           jQuery('#chat').append(
+           $('#chat').append(
                   '<div class="direct-chat-msg">'+
                      '<div class="direct-chat-info clearfix">'+
                         '<span class="direct-chat-name pull-left">'+ ctagentName +'</span>'+
@@ -74,76 +71,40 @@ function initSocketio(){
                      '</div>'+
                   '</div>'
              );
-           jQuery('#chat-body').collapse('show');
-           jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
+           $('#chat-body').collapse('show');
+           $('#chat').scrollTop($('#chat')[0].scrollHeight);
            ctNotificationAudio.play();
         });
-        jQuery('#messageText').keypress(function(e){
-           var msg = getMessage();
+        $('#messageText').keypress(function(e) {
            var code = e.keyCode || e.which;
-           if (code == 13 && isValidMessage(msg)) {
-               submitMessage(socket,msg);
-               drawBubble(getFormatedDate(),msg);
-               cleanMessageArea();
-               jQuery('#chat-body').collapse('show');
-               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
+           if (code == 13) {
+             var d = new Date();
+             var datenow =  d.getDate()+'/'
+                    +(d.getMonth()+1)+'/'
+                    + d.getFullYear() +'@'
+                    + d.getHours() + ":"
+                    + d.getMinutes() + ":"
+                    + d.getSeconds();
+
+               text = $('#messageText').val();
+               $('#messageText').val('');
+               socket.emit('text', {msg: text});
+               $('#chat').append(
+                       '<div class="direct-chat-msg right">'+
+                        '<div class="direct-chat-info clearfix">'+
+                           '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
+                        '</div>'+
+                        '<div class="direct-chat-text">'+
+                           text +
+                        '</div>'+
+                       '</div>'
+               );
+               $('#chat-body').collapse('show');
+               $('#chat').scrollTop($('#chat')[0].scrollHeight);
            }
         });
-        jQuery('#sendMessage').click(function() { 
-            var msg = getMessage();
-            if(isValidMessage(msg)){  
-               submitMessage(socket,msg);
-               drawBubble(getFormatedDate(),msg);
-               cleanMessageArea();
-               jQuery('#chat-body').collapse('show');
-               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
-               }
-        });
-
-}
-function drawBubble(date, msg){
-  jQuery('#chat').append(
-     '<div class="direct-chat-msg right">'+
-      '<div class="direct-chat-info clearfix">'+
-         '<span class="direct-chat-timestamp pull-right">'+ date +'</span>'+
-      '</div>'+
-      '<div class="direct-chat-text">'+
-         msg +
-      '</div>'+
-     '</div>'
-   );
-}
-function htmlEncode(value){
-  return jQuery('<div/>').text(value).html();
 }
 
-function htmlDecode(value){
-  return jQuery('<div/>').html(value).text();
-}
-
-function cleanMessageArea(){
-  jQuery('#messageText').val('');
-}
-function getMessage(){
-  return htmlEncode(jQuery('#messageText').val());
-}
-function isValidMessage(msg){
-  return !(new RegExp(/^\s*$/)).test(msg);
-}
-
-function getFormatedDate(timestamp){
-   var d = (timestamp) ? new Date(timestamp) : new Date();;
-   return d.getDate()+'/'
-          +(d.getMonth()+1)+'/'
-          + d.getFullYear() +'@'
-          + d.getHours() + ":"
-          + d.getMinutes() + ":"
-          + d.getSeconds();
-
-}
-function submitMessage(socket,text){
-  socket.emit('text', {msg: text});
-}
 function initCotorra(data){
 	if (typeof jQuery != 'undefined') {
 
@@ -171,7 +132,7 @@ function initCotorra(data){
 		  "<div class=\"box-header with-border\">" +
 		    "<h3 class=\"box-title\">Chat</h3>" +
 		    "<div class=\"box-tools pull-right\">" +
-		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\">-</i></button>" +
+		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\"></i></button>" +
 		    "</div>" +
 		  "</div><!-- /.box-header -->" +
 		  "<div class=\"box-body collapse\" id=\"chat-body\">" +
@@ -198,7 +159,7 @@ function initCotorra(data){
       }
    )
    //Manera fea para verificar si estam los plugins de bootstrap
-   if(typeof(jQuery.fn.popover) == 'undefined'){
+   if(typeof($.fn.popover) == 'undefined'){
       jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
                console.log("Boostrapmin loaded");
             });
