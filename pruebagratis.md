@@ -19,8 +19,9 @@ permalink: pruebagratis
 
     <p>Solo por esta semana, accede a la prueba gratuita de 14 dias de Cotorra.</p>
 
-      <form action="//formspree.io/contacto@ingeros.com" method="POST">
+      <form id="contactform" method="POST">
 	<div class="form-group">
+  <input type="text" name="_gotcha" style="display:none" />
 	    <input type="text" class="form-control" id="nombre" name="nombre"
 		  placeholder="Nombre" required>
 	</div>
@@ -39,5 +40,9 @@ permalink: pruebagratis
 	<input type="hidden" name="_next" value="http://cotorrachatbot.com/thanks.html">
 	<button type="submit" class="btn btn-danger btn-block">Prueba Gratis</button>
       </form>
+      <script>
+          var contactform =  document.getElementById('contactform');
+          contactform.setAttribute('action', '//formspree.io/' + 'contacto' + '@' + 'ingeros' + '.' + 'com');
+      </script>
     </div>
   </div>

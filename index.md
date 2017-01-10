@@ -57,12 +57,12 @@ permalink: index.html
 	    <i class="fa fa-mobile icon-head"></i>
 	    <h4 class="title-head">Notificaciones Push</h4>
 	    <p>Recibe notificaciones push en tu móvil, smarthphone o escritorio, cuando los clientes dejen todos sus datos de contacto.</p>
-    </div><!-- col-lg-4 -->    
+    </div><!-- col-lg-4 -->
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-shopping-bag icon-head"></i>
 	    <h4 class="title-head">Vitrina de productos</h4>
 	    <p>Muestra todo tu catálogo de productos desde el chat y lleva directamente a los clientes a tu tienda o vende directamente desde el chat!</p>
-    </div><!-- col-lg-4 -->    
+    </div><!-- col-lg-4 -->
     <div class="col-lg-4 caracteristicas">
 	    <i class="fa fa-comments icon-head"></i>
 	    <h4 class="title-head">Integración NLP </h4>
@@ -76,12 +76,13 @@ permalink: index.html
     <div class="col-md-6 col-sm-6" id="contacto">
     <h4>Contacto</h4>
 
-    <p>Queremos hablar con tantas personas como podamos, para conocer como interactúan con sus clientes.  
+    <p>Queremos hablar con tantas personas como podamos, para conocer como interactúan con sus clientes.
     Completa el siguiente formulario y estaremos en contacto tan pronto como sea posible.</p>
 
     <p>Gracias!</p>
-      <form action="//formspree.io/contacto@ingeros.com" method="POST">
+      <form id="contactform" method="POST">
 	<div class="form-group">
+  <input type="text" name="_gotcha" style="display:none" />
 	    <input type="text" class="form-control" id="nombre" name="nombre"
 		  placeholder="Nombre" required>
 	</div>
@@ -99,5 +100,9 @@ permalink: index.html
 	<input type="hidden" name="_next" value="http://cotorrachatbot.com/thanks.html">
 	<button type="submit" class="btn btn-default btn-block">Enviar</button>
       </form>
+      <script>
+          var contactform =  document.getElementById('contactform');
+          contactform.setAttribute('action', '//formspree.io/' + 'contacto' + '@' + 'ingeros' + '.' + 'com');
+      </script>
     </div>
   </div>
