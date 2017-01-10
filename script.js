@@ -41,7 +41,7 @@ function insertScript(item){
 
 function initSocketio(){
    var socket;
-   socket = io.connect('http://' + "devapp.cotorrachatbot.com" + ':' + location.port + '/webchat');
+   socket = io.connect('http://' + "cotorra-testingarg.rhcloud.com" + ':' + "8000" + '/webchat');
         socket.on('connect', function() {
             if (Cookies.get('id')){
                socket.emit('joined', {id: Cookies.get('id')});
@@ -154,7 +154,7 @@ function initCotorra(data){
 	    alert("jQuery library is not found! Cotorra will not work.");
 	}
 	ctGlobalURL = "http://cotorrachatbot.com"
-   ctAppURL = "http://devapp.cotorrachatbot.com"
+   ctAppURL = "http://app.cotorrachatbot.com"
 	//ctGlobalURL = "web"
 	ctHeader = document.getElementsByTagName('head')[0];
 	ctBody = document.getElementsByTagName('body')[0];
