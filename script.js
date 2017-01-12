@@ -41,7 +41,7 @@ function insertScript(item){
 
 function initSocketio(){
    var socket;
-   socket = io.connect('http://' + "cotorra-testingarg.rhcloud.com" + ':' + "8000" + '/webchat');
+   socket = io.connect('http://' + "devapp.cotorrachatbot.com" + ':' + location.port + '/webchat');
         socket.on('connect', function() {
             if (Cookies.get('id')){
                socket.emit('joined', {id: Cookies.get('id')});
