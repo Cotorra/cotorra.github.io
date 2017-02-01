@@ -41,7 +41,7 @@ function insertScript(item){
 
 function initSocketio(){
    var socket;
-   socket = io.connect('http://' + "app.cotorrachatbot.com" + ':' + location.port + '/webchat');
+   socket = io.connect('https://' + "app.cotorrachatbot.com" + ':' + location.port + '/webchat');
         socket.on('connect', function() {
             if (Cookies.get('id')){
                socket.emit('joined', {id: Cookies.get('id')});
@@ -50,6 +50,7 @@ function initSocketio(){
             }
         });
         socket.on('status', function(data) {
+           data = JSON.parse(data);
            Cookies.set('id', data.id);
            ctagentName = data.agentName;
            ctagentAvatar = data.avatar;
