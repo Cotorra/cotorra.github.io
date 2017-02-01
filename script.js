@@ -9,7 +9,7 @@ document.onreadystatechange = function () {
 
 
 function appendCSS(){
-    ctURLCSS = ['/static/css/cotorrastyles.css'];
+    ctURLCSS = ['/cotorrastyles.css'];
 
     ctURLCSS.forEach(function (item)
     {
@@ -38,6 +38,7 @@ function insertScript(item){
          ctID++;
       }
    }
+
 
 function insertCotorraChat(socket, data){
    ctColor = 'primary'
@@ -102,51 +103,50 @@ function insertCotorraChat(socket, data){
          }
    });
 
-}
-
-
+}   
+   
+   
 function initSocketio(){
    var socket;
    socket = io.connect('https://' + "app.cotorrachatbot.com" + ':' + location.port + '/webchat');
-   socket.on('connect', function() {
-      if (Cookies.get('id')){
-         socket.emit('joined', {id: Cookies.get('id'), path: window.location.pathname});
-      }else{
-         socket.emit('joined', {path: window.location.pathname});
-      }
-   });
-   socket.on('status', function(data) {
-     data = JSON.parse(data);
-     console.log(data);
-     Cookies.set('id', data.id);
-     ctagentName = data.agentName;
-     ctagentAvatar = data.avatar;
-     insertCotorraChat(socket, data);
-   });
-   socket.on('message', function(data) {
-     var d = new Date();
-     var datenow =  d.getDate()+'/'
-            +(d.getMonth()+1)+'/'
-            + d.getFullYear() +'@'
-            + d.getHours() + ":"
-            + d.getMinutes() + ":"
-            + d.getSeconds();
-     jQuery('#chat').append(
-            '<div class="direct-chat-msg">'+
-               '<div class="direct-chat-info clearfix">'+
-                  '<span class="direct-chat-name pull-left">'+ ctagentName +'</span>'+
-                  '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
-               '</div>'+
-               '<img class="direct-chat-img" src=\"'+ ctagentAvatar +'\" alt="message user image">'+
-               '<div class="direct-chat-text">'+
-                  data.msg +
-               '</div>'+
-            '</div>'
-       );
-     jQuery('#chat-body').collapse('show');
-     jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
-     ctNotificationAudio.play();
-   });
+        socket.on('connect', function() {
+            if (Cookies.get('id')){
+               socket.emit('joined', {id: Cookies.get('id')});
+            }else{
+               socket.emit('joined', {});
+            }
+        });
+        socket.on('status', function(data) {
+           data = JSON.parse(data);
+           Cookies.set('id', data.id);
+           ctagentName = data.agentName;
+           ctagentAvatar = data.avatar;
+           insertCotorraChat(socket, data);
+        });
+        socket.on('message', function(data) {
+           var d = new Date();
+           var datenow =  d.getDate()+'/'
+                  +(d.getMonth()+1)+'/'
+                  + d.getFullYear() +'@'
+                  + d.getHours() + ":"
+                  + d.getMinutes() + ":"
+                  + d.getSeconds();
+           jQuery('#chat').append(
+                  '<div class="direct-chat-msg">'+
+                     '<div class="direct-chat-info clearfix">'+
+                        '<span class="direct-chat-name pull-left">'+ ctagentName +'</span>'+
+                        '<span class="direct-chat-timestamp pull-right">'+ datenow +'</span>'+
+                     '</div>'+
+                     '<img class="direct-chat-img" src=\"'+ ctagentAvatar +'\" alt="message user image">'+
+                     '<div class="direct-chat-text">'+
+                        data.msg +
+                     '</div>'+
+                  '</div>'
+             );
+           jQuery('#chat-body').collapse('show');
+           jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
+           ctNotificationAudio.play();
+        });
 }
 function drawBubble(date, msg){
   jQuery('#chat').append(
@@ -192,37 +192,38 @@ function submitMessage(socket,text){
   socket.emit('text', {msg: text});
 }
 function initCotorra(data){
-    //ctGlobalURL = "web"
-    ctGlobalURL = "https://app.cotorrachatbot.com"
-    ctAppURL = "https://app.cotorrachatbot.com"
-    if (typeof jQuery != 'undefined') {
+	if (typeof jQuery != 'undefined') {
 
-	   console.log("Jquery already loaded");
+	   //alert("jQuery library is loaded!. Cotorra will work.");
 
 	}else{
-        insertScript(ctGlobalURL+'/static/js/jquery.min.js');
-	    console.log("jQuery library is not found! Cotorra will not work.");
+
+	    alert("jQuery library is not found! Cotorra will not work.");
 	}
-    ctHeader = document.getElementsByTagName('head')[0];
-    ctBody = document.getElementsByTagName('body')[0];
-    ctNotificationAudio = new Audio( ctGlobalURL + '/static/media/nuevomensaje.mp3' );
-    ctID = 0;
-    ctagentName = '';
-    ctagentAvatar = '';
-    appendCSS();
-    ctURLJS = ['/static/js/js.cookie.js'];
-    ctURLJS.forEach(function (item){
-        insertScript(item)
+	ctGlobalURL = "https://cotorrachatbot.com"
+   ctAppURL = "https://app.cotorrachatbot.com"
+	//ctGlobalURL = "web"
+	ctHeader = document.getElementsByTagName('head')[0];
+	ctBody = document.getElementsByTagName('body')[0];
+   ctNotificationAudio = new Audio( ctGlobalURL + '/nuevomensaje.mp3' );
+   ctID = 0;
+   ctagentName = '';
+   ctagentAvatar = '';
+	appendCSS();
+
+   ctURLJS = ['/js.cookie.js'];
+   ctURLJS.forEach(function (item){
+      insertScript(item)
       }
-    )
-    //Manera fea para verificar si estam los plugins de bootstrap
-    if(typeof(jQuery.fn.popover) == 'undefined'){
-      jQuery.getScript(ctGlobalURL+'/static/js/bootstrap.min.js', function () {
+   )
+   //Manera fea para verificar si estam los plugins de bootstrap
+   if(typeof(jQuery.fn.popover) == 'undefined'){
+      jQuery.getScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function () {
                console.log("Boostrapmin loaded");
-      });
-    }
-    jQuery.getScript(ctGlobalURL+'/static/js/socket.io.min.js', function () {
+            });
+   }
+   jQuery.getScript(ctGlobalURL+'/socket.io.min.js', function () {
             console.log("Script loaded");
             initSocketio();
-    });
+        });
 }
