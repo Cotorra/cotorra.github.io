@@ -50,7 +50,6 @@ function initSocketio(){
             }
         });
         socket.on('status', function(data) {
-           data = JSON.parse(data);
            Cookies.set('id', data.id);
            ctagentName = data.agentName;
            ctagentAvatar = data.avatar;
