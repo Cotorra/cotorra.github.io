@@ -147,28 +147,6 @@ function initSocketio(){
            jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
            ctNotificationAudio.play();
         });
-        jQuery('#messageText').keypress(function(e){
-           var msg = getMessage();
-           var code = e.keyCode || e.which;
-           if (code == 13 && isValidMessage(msg)) {
-               submitMessage(socket,msg);
-               drawBubble(getFormatedDate(),msg);
-               cleanMessageArea();
-               jQuery('#chat-body').collapse('show');
-               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
-           }
-        });
-        jQuery('#sendMessage').click(function() {
-            var msg = getMessage();
-            if(isValidMessage(msg)){
-               submitMessage(socket,msg);
-               drawBubble(getFormatedDate(),msg);
-               cleanMessageArea();
-               jQuery('#chat-body').collapse('show');
-               jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
-               }
-        });
-
 }
 function drawBubble(date, msg){
   jQuery('#chat').append(
