@@ -39,6 +39,73 @@ function insertScript(item){
       }
    }
 
+
+function insertCotorraChat(socket, data){
+   ctColor = 'primary'
+   ctwindowtitle = 'Chat'
+
+   if (data.windowcolor){
+      ctColor = data.windowcolor;
+   }
+   if (data.windowtitle){
+      ctwindowtitle = data.windowtitle;
+   }
+
+   if (!document.getElementById("windowCotorraChatbot")){
+    	var ctdiv = document.createElement("div");
+        ctdiv.id = "windowCotorraChatbot";
+    	ctdiv.className = 'navbar-fixed-bottom col-md-3 col-xs-6 col-sm-6';
+        ctdiv.innerHTML =
+    		"<div class=\"box box-"+ctColor+" direct-chat direct-chat-"+ctColor+" box-solid\">" +
+    		  "<div class=\"box-header with-border\">" +
+    		    "<h3 class=\"box-title\">"+ctwindowtitle+"</h3>" +
+    		    "<div class=\"box-tools pull-right\">" +
+    		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\">-</i></button>" +
+    		    "</div>" +
+    		  "</div><!-- /.box-header -->" +
+    		  "<div class=\"box-body collapse\" id=\"chat-body\">" +
+    		    "<!-- Conversations are loaded here -->" +
+    		    "<div class=\"direct-chat-messages\" id=\"chat\">" +
+    		      "</div><!-- /.direct-chat-msg -->" +
+    		  "</div><!-- /.box-body -->"+
+              "<div class=\"box-footer\">"+
+                "<div class=\"input-group\">"+
+                  "<input type=\"text\" name=\"message\" placeholder=\"Escribir mensaje ...\" class=\"form-control\" id=\"messageText\">"+
+                  "<span class=\"input-group-btn\">"+
+                    "<button type=\"button\" class=\"btn btn-"+ctColor+" btn-flat\" id=\"sendMessage\">Enviar</button>"+
+                  "</span>"+
+                "</div>"+
+                "<span class=\"direct-chat-timestamp pull-right\">Powered by <a href=\"http://cotorrachatbot.com\">Cotorra</span>" +
+              "</div><!-- /.box-footer-->"+
+    		"</div><!--/.direct-chat -->";
+
+    	ctBody.appendChild(ctdiv);
+   }
+   jQuery('#messageText').keypress(function(e){
+     var msg = getMessage();
+     var code = e.keyCode || e.which;
+     if (code == 13 && isValidMessage(msg)) {
+         submitMessage(socket,msg);
+         drawBubble(getFormatedDate(),msg);
+         cleanMessageArea();
+         jQuery('#chat-body').collapse('show');
+         jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
+     }
+   });
+   jQuery('#sendMessage').click(function() {
+      var msg = getMessage();
+      if(isValidMessage(msg)){
+         submitMessage(socket,msg);
+         drawBubble(getFormatedDate(),msg);
+         cleanMessageArea();
+         jQuery('#chat-body').collapse('show');
+         jQuery('#chat').scrollTop(jQuery('#chat')[0].scrollHeight);
+         }
+   });
+
+}   
+   
+   
 function initSocketio(){
    var socket;
    socket = io.connect('https://' + "app.cotorrachatbot.com" + ':' + location.port + '/webchat');
@@ -52,6 +119,7 @@ function initSocketio(){
         socket.on('status', function(data) {
            data = JSON.parse(data);
            Cookies.set('id', data.id);
+           insertCotorraChat(socket, data);
            ctagentName = data.agentName;
            ctagentAvatar = data.avatar;
         });
@@ -163,36 +231,7 @@ function initCotorra(data){
    ctID = 0;
    ctagentName = '';
    ctagentAvatar = '';
-	appendCSS();
-
-	var ctdiv = document.createElement("div");
-	ctdiv.className = 'navbar-fixed-bottom col-md-3 col-xs-6 col-sm-6';
-    ctdiv.innerHTML =
-		"<div class=\"box box-danger direct-chat direct-chat-danger box-solid\">" +
-		  "<div class=\"box-header with-border\">" +
-		    "<h3 class=\"box-title\">Chat</h3>" +
-		    "<div class=\"box-tools pull-right\">" +
-		      "<button class=\"btn btn-box-tool\" data-toggle=\"collapse\" data-target=\"#chat-body\"><i class=\"fa fa-minus\">-</i></button>" +
-		    "</div>" +
-		  "</div><!-- /.box-header -->" +
-		  "<div class=\"box-body collapse\" id=\"chat-body\">" +
-		    "<!-- Conversations are loaded here -->" +
-		    "<div class=\"direct-chat-messages\" id=\"chat\">" +
-		      "</div><!-- /.direct-chat-msg -->" +
-		  "</div><!-- /.box-body -->"+
-          "<div class=\"box-footer\">"+
-            "<div class=\"input-group\">"+
-              "<input type=\"text\" name=\"message\" placeholder=\"Escribir mensaje ...\" class=\"form-control\" id=\"messageText\">"+
-              "<span class=\"input-group-btn\">"+
-                "<button type=\"button\" class=\"btn btn-danger btn-flat\" id=\"sendMessage\">Enviar</button>"+
-              "</span>"+
-            "</div>"+
-            "<span class=\"direct-chat-timestamp pull-right\">Powered by <a href=\"http://cotorrachatbot.com\">Cotorra</span>" +
-          "</div><!-- /.box-footer-->"+
-		"</div><!--/.direct-chat -->";
-
-	ctBody.appendChild(ctdiv);
-
+   appendCSS();
    ctURLJS = ['/js.cookie.js'];
    ctURLJS.forEach(function (item){
       insertScript(item)
