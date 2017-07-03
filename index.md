@@ -31,6 +31,12 @@ permalink: index.html
     </div>
   </div>
 
+   <div class="row lg">
+      <div class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/AkZp0vBiZVU" allowfullscreen=""></iframe>
+      </div>
+   </div>
+  
   <div class="row lg" id="conocemas">
     <h2 class="generich2">Ventas, soporte, información</h2>
     <h4 class="generich4">Asistente virtual constantemente mejorado y optimizado para proveer el mejor soporte y mejorar las conversiones de venta.</h4>

@@ -7,6 +7,12 @@ permalink: pruebagratis
     <div class="col-md-7 col-md-offset-1 col-sm-offset-1 col-sm-7">
       <h1 class="h1index">Cotorra ChatBot</h1>
       <h2 class="h2index">Tu sitio web, negocio o fanpage atendido las 24hs los 7 días de la semana</h2>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/AkZp0vBiZVU" allowfullscreen=""></iframe>
+      </div>
+
+      
       <p><strong>Cotorra</strong> es un <strong>servicio de atención online</strong> automatizado(un Chatbot, Robot Chat, Bot) capaz de funcionar las 24hs del día.
       Le ayuda a convertir cada visita o consulta en un cliente. También puede gestionar las consultas y pedidos de los usuarios o clientes.</p>
       <p>Cotorra es un <strong>robot chat</strong>, o <strong>chatbot</strong>, es decir un sistema automatizado que simula la conversación con una persona.
