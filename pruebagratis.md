@@ -9,7 +9,7 @@ permalink: pruebagratis
       <h2 class="h2index">Tu sitio web, negocio o fanpage atendido las 24hs los 7 días de la semana</h2>
       
       <div class="embed-responsive embed-responsive-16by9">
-         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/AkZp0vBiZVU" allowfullscreen=""></iframe>
+         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AkZp0vBiZVU?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen=""></iframe>
       </div>
 
       
