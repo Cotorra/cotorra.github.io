@@ -33,7 +33,7 @@ permalink: index.html
 
    <div class="row lg">
       <div class="embed-responsive embed-responsive-16by9">
-         <iframe class="embed-responsive-item" src="/https://www.youtube.com/embed/AkZp0vBiZVU?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen=""></iframe>
+         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AkZp0vBiZVU?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen=""></iframe>
       </div>
    </div>
   
