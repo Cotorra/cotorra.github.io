@@ -29,9 +29,24 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+@media (min-width: 768px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  body {
+    font-size: 32px;
+  }
+}
+
+
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
+    font-size: 2em;
     font-weight: 300;
     color: #FFFFFF;
 }
@@ -41,16 +56,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: 20px;
     margin-top: 0;
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 4em;
+    line-height: 1.8em;
     color: #fff; 
 }
 
 .h2index {
     font-family: "Raleway";
-    font-size: 30px;
-    line-height: 30px;
-    line-height: 42px;
+    font-size: 1.85em;
+    line-height: 1em;
     font-weight: 100;
     margin-bottom: 30px;
     color: #fff;
@@ -100,7 +114,6 @@ p {
     background-color: #2b93cc;
     font-family: "Lato";
     font-weight: 300;
-    font-size: 16px;
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -125,18 +138,16 @@ p {
 .title-head {
     text-transform: none;
     color: #333;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 1.3em;
+    line-height: 1em;
     font-weight: 500;
-    margin-bottom: 22px;
 }
 
 .icon-head {
     text-transform: none;
     font-size: 50px;
-    line-height: 22px;
+    line-height: 1em;
     font-weight: 500;
-    margin-bottom: 22px;
     color: #2b93cc;
     padding: 20px;   
 }
@@ -144,16 +155,16 @@ p {
 .generich2 {
     text-transform: none;
     color: #333;
-    font-size: 40px;
-    line-height: 22px;
+    font-size: 2em;
+    line-height: 1em;
     font-weight: 500;
     margin-bottom: 30px;
 }
 .generich4 {
     text-transform: none;
     color: #333;
-    font-size: 25px;
-    line-height: 22px;
+    font-size: 1.3em;
+    line-height: 1em;
     font-weight: 500;
     margin-bottom: 50px;
 }
@@ -175,8 +186,8 @@ p {
 /* Links */
 #footer a {
     color: #FFFAFF;
-    font-size: 25px;
-    line-height: 22px;
+    font-size: 1.25em;
+    line-height: 1em;
     font-weight: 500;
     word-wrap: break-word;
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -200,4 +211,26 @@ p {
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+/* Sidebar Sticky */
+.affix-top,.affix{
+	position: static;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top:30px;
+
+  }
+  
+  #sidebar.affix-bottom {
+    position: relative;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    right: 0;
+  }
 }

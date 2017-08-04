@@ -81,9 +81,10 @@ permalink: index.html
     </div>
     <div class="col-md-6 col-sm-6" id="contacto">
     <h4>Contacto</h4>
-
+    <!--
     <p>Queremos hablar con tantas personas como podamos, para conocer como interactúan con sus clientes.
     Completa el siguiente formulario y estaremos en contacto tan pronto como sea posible.</p>
+    -->
 
     <p>Gracias!</p>
       <form id="contactform" method="POST">

@@ -20,7 +20,7 @@ permalink: pruebagratis
       Cotorra es un sistema flexible que puede ser adaptado a las necesidades del cliente o negocio.</p>
       <h2 class="h2index">¡Conectáte con más clientes y aumentá las ventas!</h2>
     </div>
-    <div class="col-md-4 col-sm-4" id="contacto">
+    <div class="col-md-4 col-sm-4" id="sidebar" data-spy="affix" data-offset-top="60" data-offset-bottom="300">
     <h4>Prueba Gratis</h4>
 
     <p>Solo por esta semana, accede a la prueba gratuita de 14 dias de Cotorra.</p>
@@ -46,6 +46,7 @@ permalink: pruebagratis
 	<input type="hidden" name="_next" value="http://cotorrachatbot.com/thanks.html">
 	<button type="submit" class="btn btn-danger btn-block">Prueba Gratis</button>
       </form>
+
       <script>
           var contactform =  document.getElementById('contactform');
           contactform.setAttribute('action', '//formspree.io/' + 'contacto' + '@' + 'ingeros' + '.' + 'com');
