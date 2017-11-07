@@ -209,39 +209,32 @@ permalink: index.html
                   <div class="col-12 col-md-8 col-lg-8 col-xl-6">
                     <div class="row">
                       <div class="col text-center">
-                        <h1>Register</h1>
-                        <p class="text-h3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. </p>
+                        <h1>Chatbot Gratis!</h1>
+                        <p class="text-h3">Completá tus datos y un asesor se comunicara para que empieces a disfrutar de la prueba gratuita de Cotorra ChatBot.</p>
                       </div>
                     </div>
                     <div class="row align-items-center">
-                      <div class="col mt-4">
-                        <input type="text" class="form-control" placeholder="Company Name">
-                      </div>
-                    </div>
-                    <div class="row align-items-center mt-4">
-                      <div class="col">
-                        <input type="email" class="form-control" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="row align-items-center mt-4">
-                      <div class="col">
-                        <input type="password" class="form-control" placeholder="Password">
-                      </div>
-                      <div class="col">
-                        <input type="password" class="form-control" placeholder="Confirm Password">
-                      </div>
-                    </div>
-                    <div class="row justify-content-start mt-4">
-                      <div class="col">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input">
-                            I Read and Accept <a href="https://www.froala.com">Terms and Conditions</a>
-                          </label>
-                        </div>
-
-                        <button class="btn mt-4">Submit</button>
-                      </div>
+                       <form id="contactform" method="POST">
+                       	<div class="form-group">
+                         <input type="text" name="_gotcha" style="display:none" />
+                       	    <input type="text" class="form-control" id="nombre" name="nombre"
+                       		  placeholder="Nombre" required>
+                       	</div>
+                       	<div class="form-group">
+                       	  <input type="email" class="form-control" id="email" name="_replyto"
+                       		  placeholder="Introduce tu email" required>
+                       	</div>
+                       	<div class="form-group">
+                       	    <input type="text" class="form-control" id="fanpage" name="fanpage"
+                       		  placeholder="Pagina de facebook http://facebook.com/tupagina" required>
+                       	</div>
+                             <div class="form-group">
+                       	    <input type="text" class="form-control" id="fanpage" name="telefono"
+                       		  placeholder="Telefono">
+                       	</div>
+                       	<input type="hidden" name="_next" value="http://cotorrachatbot.com/thanks.html">
+                       	<button type="submit" class="btn btn-danger btn-block">Prueba Gratis</button>
+                       </form>
                     </div>
                   </div>
                 </div>
