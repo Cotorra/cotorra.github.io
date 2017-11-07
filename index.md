@@ -135,7 +135,7 @@ permalink: index.html
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Ingrese su sitio web" id="url">
               <span class="input-group-btn">
-                <button class="btn btn-empty btn-white" type="button" onClick="window.open('app.cotorrachatbot.com/demo?url='+$("#url").val());">Previsualizar</button>
+                <button class="btn btn-empty btn-white" type="button" onClick="window.open('http://app.cotorrachatbot.com/demo?url='+$('#url').val());">Previsualizar</button>
               </span>
             </div>
           </div>
