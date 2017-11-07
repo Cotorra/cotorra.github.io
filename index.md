@@ -203,14 +203,14 @@ permalink: index.html
          </div>
          <div class="modal-body">
 
-            <section class="fdb-block">
+            <section>
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-8 col-lg-8 col-xl-6">
                     <div class="row">
                       <div class="col text-center">
                         <h1>Chatbot Gratis!</h1>
-                        <p class="text-h3">Completá tus datos y un asesor se comunicara para que empieces a disfrutar de la prueba gratuita de Cotorra ChatBot.</p>
+                        <p class="text-h5">Completá tus datos y un asesor se comunicara para que empieces a disfrutar de la prueba gratuita de Cotorra ChatBot.</p>
                       </div>
                     </div>
                     <div class="row align-items-center">
