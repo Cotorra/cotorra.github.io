@@ -7,7 +7,7 @@ permalink: index.html
  <div class="container">
     <nav class="navbar navbar-expand-md no-gutters">
       <div class="col-3 text-left">
-      <a href="https://www.froala.com">
+      <a href="https://cotorrachatbot.com">
           <img src="img/brand-header.png" height="20" alt="image">
       </a>
       </div>
@@ -18,20 +18,17 @@ permalink: index.html
 
       <div class="collapse navbar-collapse navbar-collapse-2 justify-content-center col-md-6" id="navbarNav7">
       <ul class="navbar-nav justify-content-center">
-          <li class="nav-item active">
-            <a class="nav-link" href="https://www.froala.com">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#beneficios">Beneficios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.froala.com">Features</a>
+            <a class="nav-link" href="#probar">Probar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.froala.com">Pricing</a>
+            <a class="nav-link" href="#ejemplos">Ejemplos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.froala.com">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.froala.com">Contact</a>
+            <a class="nav-link" href="#pruebaGratis">Prueba Gratis</a>
           </li>
       </ul>
       </div>
@@ -84,7 +81,7 @@ permalink: index.html
 
 <!-- Features 1 -->
 <section class="fdb-block">
- <div class="container">
+ <div id="beneficios" class="container">
     <div class="row text-center">
       <div class="col-12">
         <span class="text-h2">LA MAYORÍA DE TUS VISITANTES SE VAN PORQUE QUIEREN CHATEAR</span>
@@ -119,7 +116,7 @@ permalink: index.html
 
 <!-- Formulario Prueba -->
 <section class="fdb-block bg-blue">
- <div class="container">
+ <div  id="prueba" class="container">
     <div class="row">
       <div class="col-12 col-md-6 m-md-auto ml-lg-0 col-lg-5">
       <img alt="image" class="img-fluid" src="img/probar-preview.png">
@@ -147,7 +144,7 @@ permalink: index.html
 </section>
 
 <!-- Ejemplo de Bots -->
-<section class="fdb-block">
+<section id="ejemplos" class="fdb-block">
    <div class="container">
       <div class="row justify-content-center pb-xl-5">
          <div class="col-12 col-md-8 text-center">
