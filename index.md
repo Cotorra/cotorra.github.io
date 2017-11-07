@@ -28,7 +28,7 @@ permalink: index.html
             <a class="nav-link" href="#ejemplos">Ejemplos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#pruebaGratis">Prueba Gratis</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#pruebaModal">Prueba Gratis</a>
           </li>
       </ul>
       </div>
@@ -36,11 +36,11 @@ permalink: index.html
       <div class="collapse navbar-collapse navbar-collapse-2">
       <ul class="navbar-nav ml-auto justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" href="https://www.froala.com">Log In</a>
+            <a class="nav-link" href="https://app.cotorrachatbot.com/">Log In</a>
           </li>
       </ul>
 
-      <a class="btn ml-md-3" href="https://www.froala.com">Register</a>
+      <a class="btn ml-md-3" href="#" data-toggle="modal" data-target="#pruebaModal">Registrar</a>
       </div>
     </nav>
  </div>
@@ -54,11 +54,11 @@ permalink: index.html
          <p class="text-h3">Cotorra ChatBot es un sistema de chat en linea que permite mantener abierto y atendido un negocio las 24hs. Con  el propósito de convertir visitas web en clientes.</p>
          <div class="row">
             <div class="col-12 col-sm-4 col-xl-3 m-auto pt-4 pt-sm-0">
-               <a href="https://www.froala.com" class="btn btn-empty btn-white" data-toggle="modal" data-target="#videoModal"><i class="fa fa-play" aria-hidden="true"></i> Mirar Video</a>
+               <a href="#" class="btn btn-empty btn-white" data-toggle="modal" data-target="#videoModal"><i class="fa fa-play" aria-hidden="true"></i> Mirar Video</a>
             </div>
             <div class="col-12 col-sm-4 col-xl-3 m-auto pt-4 pt-sm-0">
 
-               <a href="https://www.froala.com" class="btn btn-white" data-toggle="modal" data-target="#pruebaModal">Prueba gratuita</a>
+               <a href="#" class="btn btn-white" data-toggle="modal" data-target="#pruebaModal">Prueba gratuita</a>
             </div>
          </div>
       </div>
@@ -80,8 +80,8 @@ permalink: index.html
 </section>
 
 <!-- Features 1 -->
-<section class="fdb-block">
- <div id="beneficios" class="container">
+<section id="beneficios" class="fdb-block">
+ <div class="container">
     <div class="row text-center">
       <div class="col-12">
         <span class="text-h2">LA MAYORÍA DE TUS VISITANTES SE VAN PORQUE QUIEREN CHATEAR</span>
@@ -115,8 +115,8 @@ permalink: index.html
 
 
 <!-- Formulario Prueba -->
-<section class="fdb-block bg-blue">
- <div  id="prueba" class="container">
+<section id="probar" class="fdb-block bg-blue">
+ <div class="container">
     <div class="row">
       <div class="col-12 col-md-6 m-md-auto ml-lg-0 col-lg-5">
       <img alt="image" class="img-fluid" src="img/probar-preview.png">
