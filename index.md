@@ -131,16 +131,14 @@ permalink: index.html
           </div>
       </div>
       <div class="row mt-2">
-         <div class="col">
-            <form action="http://app.cotorrachatbot.com/demo" method="GET">
-               <div class="input-group">
-                 <input type="text" class="form-control" placeholder="Ingrese su sitio web" name="url">
-                 <span class="input-group-btn">
-                   <input class="btn btn-empty btn-white" type="submit" value="Previsualizar">
-                 </span>
-               </div>
-            </form>
-         </div>
+          <div class="col">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Ingrese su sitio web" id="url">
+              <span class="input-group-btn">
+                <button class="btn btn-empty btn-white" type="button" onClick="window.open('app.cotorrachatbot.com/demo?url='+$("#url").val());">Previsualizar</button>
+              </span>
+            </div>
+          </div>
       </div>
 
       </div>
