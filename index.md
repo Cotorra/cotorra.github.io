@@ -61,7 +61,7 @@ permalink: index.html
             </div>
             <div class="col-12 col-sm-4 col-xl-3 m-auto pt-4 pt-sm-0">
 
-               <a href="https://www.froala.com" class="btn btn-white">Prueba gratuita</a>
+               <a href="https://www.froala.com" class="btn btn-white" data-toggle="modal" data-target="#pruebaModal">Prueba gratuita</a>
             </div>
          </div>
       </div>
