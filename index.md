@@ -232,7 +232,7 @@ permalink: index.html
                        	    <input type="text" class="form-control" id="fanpage" name="telefono"
                        		  placeholder="Telefono">
                        	</div>
-                       	<input type="hidden" name="_next" value="http://cotorrachatbot.com/thanks.html">
+                       	<input type="hidden" name="_next" value="https://www.facebook.com/cotorrachatbot/">
                        	<button type="submit" class="btn btn-danger btn-block">Prueba Gratis</button>
                        </form>
                     </div>
