@@ -214,7 +214,7 @@ permalink: index.html
                       </div>
                     </div>
                     <div class="row align-items-center">
-                       <form id="contactform" method="POST">
+                       <form id="contactform" action="//formspree.io/contacto@ingeros.com" method="POST">
                        	<div class="form-group">
                          <input type="text" name="_gotcha" style="display:none" />
                        	    <input type="text" class="form-control" id="nombre" name="nombre"
