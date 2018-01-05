@@ -3,7 +3,7 @@ layout: default
 permalink: index.html
 ---
 
-<header class="bg-dark">
+<header class="bg-dark fixed-top">
  <div class="container">
     <nav class="navbar navbar-expand-md no-gutters">
       <div class="col-3 text-left">
